@@ -115,6 +115,7 @@ public class GameState {
 				}
 				this.gui.getInGameGraphics().playingPlayer(players.getPlayerNameByID(playing_player), this.isMyTurn());
 				int n_letters = this.me.getNumberOfLetters();
+				if(TheDistributedScrabble.DEBUG)System.out.println("N letters: " + n_letters);
 				if(n_letters<8 && n_letters > 0){
 					draw(n_letters);
 					this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
