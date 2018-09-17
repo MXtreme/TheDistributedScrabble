@@ -118,8 +118,8 @@ public class GameState {
 				if(TheDistributedScrabble.DEBUG)System.out.println("N letters: " + n_letters);
 				if(n_letters<8 && n_letters > 0){
 					draw(n_letters);
-					this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
 				}
+				this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
 				this.gui.getInGameGraphics().computeAnchors();
 				this.gui.getInGameGraphics().repaint();
 				if(TheDistributedScrabble.DEBUG)this.me.printHand();
