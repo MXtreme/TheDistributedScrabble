@@ -212,6 +212,8 @@ public class GameState {
 	}
 	
 	public void tellToNextToStart(){
+		if(this.me.getId() == GameState.MAX_N_PLAYERS) return;
+		
 		Player next = this.players.getNextToMe(this.me.getId());
 		if(TheDistributedScrabble.DEBUG && next == null)System.out.println("No next player found.");
 		Vector<Object> data = new Vector<Object>();

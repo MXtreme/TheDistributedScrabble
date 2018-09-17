@@ -76,11 +76,17 @@ public class PlayerList implements Serializable{
 	}
 	
 	public Player getNextToMe(int id){
-		for(Player p : players){
-			if(p.getId()==(id+1))return p;
-			else if(id==4 && p.getId()==1) return p;
+		if(players.size() < 2){
+			return null;
 		}
-		return null;
+		
+		Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
+		
+		for(Player p : players){
+			if(p.getId() > id && p.getId() < next.getId()) next = p;			
+		}
+		
+		return next;
 	}
 	
 	public Vector<Player> getPlayers(){
