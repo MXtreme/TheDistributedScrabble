@@ -105,9 +105,10 @@ public class PlayerList implements Serializable{
 			for(Player p2 : players){
 				if(p2.getRmiName().equals(p.getRmiName())){
 					found = true;
-					tmp = p2;
 					break;
 				}
+				
+				tmp = p;
 			}
 			if(!found)players.add(tmp);
 		}
