@@ -422,4 +422,9 @@ public class GameState {
 	public boolean isMyTurn(){
 		return playing_player == me.getId();
 	}
+
+	public void refreshHand() {
+		this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
+		
+	}
 }

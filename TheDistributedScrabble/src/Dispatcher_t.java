@@ -113,6 +113,7 @@ public class Dispatcher_t extends Thread {
 		this.gs.setPlayingPlayer(n);
 		if(TheDistributedScrabble.DEBUG)System.out.println("Telling to the next to start.");
 		this.gs.draw(8);
+		this.gs.refreshHand();
 		this.gs.tellToNextToStart();
 		synchronized(this.gs){
 			this.gs.setState(GameState.STATE_GAME);
