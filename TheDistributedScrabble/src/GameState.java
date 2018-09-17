@@ -152,8 +152,8 @@ public class GameState {
 		Vector<Object> data = new Vector<Object>();
 		data.add(p);
 		for(Player d: players.getPlayers()){
-			if(d!= this.me){
-				Message m = new Message(this.rmi.getName(), d.getRmiName(), this.rmi.getMyIP(), p.getAddress(), Message.MSG_CLIENT_EXITUS, data);
+			if(d!= this.me && d!=p){
+				Message m = new Message(this.rmi.getName(), d.getRmiName(), this.rmi.getMyIP(), d.getAddress(), Message.MSG_CLIENT_EXITUS, data);
 				synchronized(this.getEnvironment().getWriteBuffer()){
 					this.getEnvironment().getWriteBuffer().add(m);
 					this.getEnvironment().getWriteBuffer().notify();
