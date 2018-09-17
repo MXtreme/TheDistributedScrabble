@@ -194,6 +194,7 @@ public class GameState {
 					this.gui.getInGameGraphics().hailToTheWinner(this.getMe().getId());
 				}else if(this.players.amITheGreaterPeer(this.getMe())){	// i'll be the new "leader" ;(
 					try{
+						if(TheDistributedScrabble.DEBUG)System.out.println("I'll be their leader ;(");
 						this.rmi.close();
 						this.rmi.setName("INetworkManager");
 						this.rmi.selfExport();
@@ -205,6 +206,7 @@ public class GameState {
 				}else{ // there should be another peer set as leader
 					players.weNeedANewLeader();
 				}
+				nextPlayingPlayer();
 			break;
 		}
 		synchronized(this.getEnvironment()){
@@ -427,6 +429,14 @@ public class GameState {
 		return playing_player == me.getId();
 	}
 
+	public void nextPlayingPlayer(){
+		Player next = new Player("", "", "", GameState.MAX_N_PLAYERS+1);
+		for(Player p: this.players.getPlayers()){
+			if(p!=this.me && p.getId()>this.me.getId() && p.getId()<next.getId())next = p;
+		}
+		playing_player = next.getId();
+	}
+	
 	public void refreshHand() {
 		this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
 		
