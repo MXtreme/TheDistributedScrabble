@@ -220,7 +220,7 @@ public class GameState {
 			players.listPlayers();
 		}
 		if(next!=null) {
-			data.add(this.players);
+			data.add(this.players.getPlayers());
 			data.add(playing_player);
 			Message m = new Message(me.getRmiName(), next.getRmiName(), this.rmi.getMyIP(), next.getAddress(), Message.MSG_START_GAME, data);
 			synchronized(this.env.getWriteBuffer()){
@@ -305,7 +305,7 @@ public class GameState {
 		this.engine.removeLetters(s);
 	}
 	
-	public void refreshPlayersList(PlayerList pl){
+	public void refreshPlayersList(Vector<Player> pl){
 		players.refresh(pl);
 	}
 	

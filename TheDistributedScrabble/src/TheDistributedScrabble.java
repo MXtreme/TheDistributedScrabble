@@ -8,8 +8,9 @@ public class TheDistributedScrabble {
 		int n = 4;
 		if(args.length>0){
 			for(String s : args){
-				TheDistributedScrabble.DEBUG = s=="debug" ? true : false;
+				
 				if(isInteger(s)) n = Integer.parseInt(s);
+				else TheDistributedScrabble.DEBUG = s.equals("debug") ? true : false;
 			}
 		}
 		while(!end){

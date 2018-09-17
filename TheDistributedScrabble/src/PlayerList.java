@@ -98,9 +98,9 @@ public class PlayerList implements Serializable{
 		players = new Vector<Player>();
 	}
 	
-	public void refresh(PlayerList pl){
+	public void refresh(Vector<Player> pl){
 		Player tmp = null;
-		for(Player p : pl.getPlayers()){
+		for(Player p : pl){
 			boolean found = false;
 			for(Player p2 : players){
 				if(p2.getRmiName().equals(p.getRmiName())){

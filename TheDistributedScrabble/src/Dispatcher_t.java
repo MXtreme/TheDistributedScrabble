@@ -107,7 +107,7 @@ public class Dispatcher_t extends Thread {
 	private void startGame(){
 		System.out.println("Full lobby. We can start the game.");
 		Vector<Object> data = (Vector<Object>)current.getData();
-		PlayerList pl = (PlayerList)data.elementAt(0);
+		Vector<Player> pl = (Vector<Player>)data.elementAt(0);
 		int n = (int)data.elementAt(1);
 		this.gs.refreshPlayersList(pl);
 		this.gs.setPlayingPlayer(n);
