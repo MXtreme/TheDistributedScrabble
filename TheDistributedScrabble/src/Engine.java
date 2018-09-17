@@ -147,6 +147,7 @@ public class Engine {
 	public String[] getNewLetters(int n_letters) {
 		String s[] = new String[n_letters];
 		for(int i=0;i<n_letters;i++){
+			if(TheDistributedScrabble.DEBUG)System.out.println("Bag size: " + bag.size());
 			int r = new  Random().nextInt(bag.size());
 			s[i] = bag.elementAt(r);
 			bag.removeElementAt(r);
