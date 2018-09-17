@@ -214,7 +214,7 @@ public class GameState {
 	
 	public void tellToNextToStart(){
 		if(this.me.getId() == GameState.MAX_N_PLAYERS) return;
-		
+		if(TheDistributedScrabble.DEBUG)System.out.println("Telling to the next.");
 		Player next = this.players.getNextToMe(this.me.getId());
 		if(TheDistributedScrabble.DEBUG && next == null)System.out.println("No next player found.");
 		Vector<Object> data = new Vector<Object>();
@@ -251,6 +251,7 @@ public class GameState {
 	
 	public void draw(int n){
 		if(n>0){
+			if(TheDistributedScrabble.DEBUG)System.out.println("Drawing...");
 			String s[] = engine.getNewLetters(n);
 			this.me.fillHand(s);
 			Vector<Object> data = new Vector<Object>();
