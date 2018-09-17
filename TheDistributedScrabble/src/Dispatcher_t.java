@@ -80,6 +80,10 @@ public class Dispatcher_t extends Thread {
 		Player p = (Player)data.elementAt(0);
 		System.err.println("Our dear " + p.getName() + " is dead under unknown circumstances :(");
 		this.gs.removePeer(p);
+		this.gs.nextPlayingPlayer();
+		synchronized(this.gs.getEnvironment()){
+			this.gs.getEnvironment().notify();
+		}
 	}
 	
 	private void applyMove(){
