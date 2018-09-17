@@ -66,7 +66,7 @@ public class Player implements Serializable {
 	public void fillHand(String letters[]){
 		int k = 0;
 		for(int i=0;i<hand.length;i++){
-			if(hand[i]==null || hand[i].equals("")){
+			if(hand[i]==null && hand[i].equals("")){
 				hand[i] = letters[k];
 				k++;
 			}
@@ -98,8 +98,10 @@ public class Player implements Serializable {
 	public void printHand(){
 		System.out.println("Printing the hand:");
 		for(int i=0;i<hand.length;i++){
-			if(hand[i]!=null || !hand[i].equals("")){
-				System.out.println(hand[i]);
+			if(hand[i]!=null){
+				if(!hand[i].equals("")){
+					System.out.println(hand[i]);
+				}
 			}
 		}
 	}
@@ -119,7 +121,7 @@ public class Player implements Serializable {
 	public int getNumberOfLetters(){
 		int n = 0;
 		for(int i=0;i<hand.length;i++){
-			if(hand[i] == null || hand[i].equals(""))n++;
+			if(hand[i] == null && hand[i].equals(""))n++;
 		}
 		return n;
 	}
