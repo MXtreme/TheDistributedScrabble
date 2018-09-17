@@ -433,9 +433,11 @@ public class GameState {
 		if(TheDistributedScrabble.DEBUG)System.out.println("Now is playing " + playing_player);
 		Player next = new Player("", "", "", GameState.MAX_N_PLAYERS+1);
 		for(Player p: this.players.getPlayers()){
-			if(p!=this.me && p.getId()>this.me.getId() && p.getId()<next.getId())next = p;
+			if(TheDistributedScrabble.DEBUG)System.out.println("Evaluating next player " + p.getId());
+			if(p.getId()>this.me.getId() && p.getId()<next.getId())next = p;
 		}
 		playing_player = next.getId();
+		if(TheDistributedScrabble.DEBUG)System.out.println("But now is playing " + playing_player);
 	}
 	
 	public void refreshHand() {
