@@ -430,6 +430,7 @@ public class GameState {
 	}
 
 	public void nextPlayingPlayer(){
+		if(TheDistributedScrabble.DEBUG)System.out.println("Now is playing " + playing_player);
 		Player next = new Player("", "", "", GameState.MAX_N_PLAYERS+1);
 		for(Player p: this.players.getPlayers()){
 			if(p!=this.me && p.getId()>this.me.getId() && p.getId()<next.getId())next = p;
