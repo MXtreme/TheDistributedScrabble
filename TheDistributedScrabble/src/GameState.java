@@ -254,6 +254,7 @@ public class GameState {
 			if(TheDistributedScrabble.DEBUG)System.out.println("Drawing...");
 			String s[] = engine.getNewLetters(n);
 			this.me.fillHand(s);
+			if(TheDistributedScrabble.DEBUG)System.out.println("Filled the hand.");
 			Vector<Object> data = new Vector<Object>();
 			data.add(s);
 			for(Player p : players.getPlayers()){
@@ -265,6 +266,7 @@ public class GameState {
 					}
 				}
 			}
+			if(TheDistributedScrabble.DEBUG)System.out.println("Finished the drawing.");
 		}
 	}
 	
