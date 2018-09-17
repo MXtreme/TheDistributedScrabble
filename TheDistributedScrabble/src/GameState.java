@@ -62,7 +62,7 @@ public class GameState {
 					if(num_players == GameState.MAX_N_PLAYERS){
 						System.out.println("Full lobby. Let's start to play. :)");
 						this.chooseStartingPlayer();
-						this.draw(8);
+						//this.draw(8);
 						this.tellToNextToStart();
 						state = GameState.STATE_GAME;
 						this.doThings();
