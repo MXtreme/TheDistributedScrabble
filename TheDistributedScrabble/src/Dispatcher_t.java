@@ -37,7 +37,7 @@ public class Dispatcher_t extends Thread {
 	
 	private void doThings(){
 		if(current!=null){
-			this.gs.getPlayers().getPlayerByName(current.getAddressSender()).setLastSeen();
+			this.gs.getPlayers().getPlayerByName(current.getSender()).setLastSeen();
 			String him = current.getSender();
 			String text;
 			if(TheDistributedScrabble.DEBUG)System.out.println("Recieved message from " + him + " of type " + current.getType());
