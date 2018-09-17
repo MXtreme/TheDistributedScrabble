@@ -121,7 +121,8 @@ public class Player implements Serializable {
 	public int getNumberOfLetters(){
 		int n = 0;
 		for(int i=0;i<hand.length;i++){
-			if(hand[i] == null && hand[i].equals(""))n++;
+			if(hand[i] == null)n++;
+			if(hand[i]!=null && hand[i].equals(""))n++;
 		}
 		return n;
 	}
