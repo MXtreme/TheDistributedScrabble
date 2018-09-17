@@ -59,7 +59,7 @@ public class Connectioner extends Thread {
 			if(p!=gs.getMe()){
 				if(TheDistributedScrabble.DEBUG)System.out.println("Connectioner: And at least one it's not me.");
 				long time = System.currentTimeMillis() - p.getLastSeen();
-				if (time >= DEFAULT_TIMEOUT) { // peer is probably dead
+				if (time >= (2*DEFAULT_TIMEOUT)) { // peer is probably dead
 					gs.peerIsDead(p);
 					return true;
 				}
