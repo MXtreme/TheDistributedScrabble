@@ -166,7 +166,8 @@ public class GameState {
 			this.gui.getInGameGraphics().hailToTheWinner(this.getMe().getId());
 		}else{
 			if(this.playing_player==p.getId()){	// it was his turn, damn him	è.é
-				this.nextTurn();
+				if(TheDistributedScrabble.DEBUG)System.out.println("It was his turn, damn him.");
+				this.nextPlayingPlayer();
 				synchronized(this.getEnvironment()){
 					this.getEnvironment().notify();
 				}
@@ -431,7 +432,6 @@ public class GameState {
 
 	public void nextPlayingPlayer(){
 		if(TheDistributedScrabble.DEBUG)System.out.println("Now is playing " + playing_player);
-		Player next = new Player("", "", "", playing_player);
 		for(Player p: this.players.getPlayers()){
 			if(TheDistributedScrabble.DEBUG)System.out.println("Evaluating next player " + p.getId());
 			if(p.getId()>playing_player){
