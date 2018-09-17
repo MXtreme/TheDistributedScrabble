@@ -110,6 +110,7 @@ public class GameState {
 					if(TheDistributedScrabble.DEBUG){
 						for(int i=0;i<s.length;i++)System.out.println("Retrieved player list as String[" + i + "] = " + s[i]);
 					}
+					this.num_players = GameState.MAX_N_PLAYERS;
 					this.gui.getInGameGraphics().playerList(s);
 					this.gui.getInGameGraphics().repaint();
 				}
