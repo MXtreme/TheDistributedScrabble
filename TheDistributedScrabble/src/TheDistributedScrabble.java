@@ -1,16 +1,21 @@
 public class TheDistributedScrabble {
 	private static final Object monitor = new Object();
 	private static boolean end = false;
-	static boolean DEBUG = true;
+	static boolean DEBUG = false;
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to The Distributed Scrabble");
 		int n = 4;
-		if(args.length>0){
-			for(String s : args){
-				
-				if(isInteger(s)) n = Integer.parseInt(s);
-				else TheDistributedScrabble.DEBUG = s.equals("debug") ? true : false;
+		if(args.length==1){
+			if(isInteger(args[0])) n = Integer.parseInt(args[0]);
+			else TheDistributedScrabble.DEBUG = args[0].equals("debug") ? true : false;
+		}else if(args.length==2) {
+			if(isInteger(args[0])) {
+				n = Integer.parseInt(args[0]);
+				TheDistributedScrabble.DEBUG = args[1].equals("debug") ? true : false;
+			}else if(isInteger(args[1])) {
+				n = Integer.parseInt(args[1]);
+				TheDistributedScrabble.DEBUG = args[0].equals("debug") ? true : false;
 			}
 		}
 		while(!end){
