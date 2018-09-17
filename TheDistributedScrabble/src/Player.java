@@ -66,7 +66,7 @@ public class Player implements Serializable {
 	public void fillHand(String letters[]){
 		int k = 0;
 		for(int i=0;i<hand.length;i++){
-			if(hand[i]==null && hand[i].equals("")){
+			if(hand[i]==null || hand[i].equals("")){
 				hand[i] = letters[k];
 				k++;
 			}
