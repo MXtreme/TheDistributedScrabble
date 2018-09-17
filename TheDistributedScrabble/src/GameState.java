@@ -432,11 +432,14 @@ public class GameState {
 
 	public void nextPlayingPlayer(){
 		if(TheDistributedScrabble.DEBUG)System.out.println("Now is playing " + playing_player);
-		for(Player p: this.players.getPlayers()){
-			if(TheDistributedScrabble.DEBUG)System.out.println("Evaluating next player " + p.getId());
-			if(p.getId()>playing_player){
-				playing_player = p.getId();
-				break;
+		if(playing_player==GameState.MAX_N_PLAYERS)playing_player = this.players.getPlayers().elementAt(0).getId();
+		else{
+			for(Player p: this.players.getPlayers()){
+				if(TheDistributedScrabble.DEBUG)System.out.println("Evaluating next player " + p.getId());
+				if(p.getId()>playing_player){
+					playing_player = p.getId();
+					break;
+				}
 			}
 		}
 		if(TheDistributedScrabble.DEBUG)System.out.println("But now is playing " + playing_player);
