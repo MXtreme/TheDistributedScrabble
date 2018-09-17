@@ -364,6 +364,11 @@ public class InGameGraphics extends GameGraphics {
 	public void refreshLetters(String letters[]){
 		Image tmp;
 		for(int i=0; i<letters.length;i++){
+			if(TheDistributedScrabble.DEBUG){
+				if(label_letters[i]==null)System.out.println("labels letter di i " + label_letters[i]==null);
+				if(letters[i]==null)System.out.println("letters[i] e' null");
+				if(letters[i]!=null)System.out.println("letters[i].charAt " + letters[i].charAt(0));
+			}
 			label_letters[i].setC(letters[i].charAt(0));
 			if(letters[i].charAt(0) == '*'){
 				tmp = img[21].getScaledInstance(label_letters[i].getWidth(), label_letters[i].getHeight(), java.awt.Image.SCALE_SMOOTH);
