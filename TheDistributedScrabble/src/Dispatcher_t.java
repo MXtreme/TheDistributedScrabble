@@ -37,6 +37,7 @@ public class Dispatcher_t extends Thread {
 	
 	private void doThings(){
 		if(current!=null){
+			this.gs.getPlayers().getPlayerByName(current.getAddressSender()).setLastSeen();
 			String him = current.getSender();
 			String text;
 			if(TheDistributedScrabble.DEBUG)System.out.println("Recieved message from " + him + " of type " + current.getType());
@@ -88,7 +89,7 @@ public class Dispatcher_t extends Thread {
 	
 	private void applyMove(){
 		if(TheDistributedScrabble.DEBUG)System.out.println("Recieved a move from " + current.getSender() + ".");
-		this.gs.nextTurn();
+		this.gs.nextPlayingPlayer();
 		Vector<Object> data = (Vector<Object>)current.getData();
 		Move m = (Move)data.elementAt(0);
 		if(!m.getWord().equals("")){

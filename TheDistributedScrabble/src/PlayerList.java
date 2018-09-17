@@ -167,4 +167,11 @@ public class PlayerList implements Serializable{
 		}
 		return pl;
 	}
+	
+	public Player getPlayerByName(String name){
+		for(Player p : this.players){
+			if(p.getName().equals(name))return p;
+		}
+		return null;
+	}
 }
