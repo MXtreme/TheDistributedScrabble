@@ -97,9 +97,11 @@ public class Connectioner extends Thread {
 		
 	private void checkForNextAlive(){
 		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
-		long time = System.currentTimeMillis() - p.getLastSeen();
-		if (time >= (2*DEFAULT_TIMEOUT)) { // peer is probably dead
-			gs.peerIsDead(p);
+		if(p!=null){
+			long time = System.currentTimeMillis() - p.getLastSeen();
+			if (time >= (2*DEFAULT_TIMEOUT)) { // peer is probably dead
+				gs.peerIsDead(p);
+			}
 		}
 	}	
 		
