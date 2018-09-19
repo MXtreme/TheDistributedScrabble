@@ -37,12 +37,13 @@ public class Connectioner extends Thread {
 				}synchronized(pl){
 					if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
 					if(!pl.isEmpty()){
+						pingToBack();
 						checkForNextAlive();
 					}
 				}
 			}
 	}
-	
+		
 		/*
 		@Override
 	public synchronized void run() {
@@ -81,6 +82,18 @@ public class Connectioner extends Thread {
 		}
 	}
 		*/
+		
+	private void pingToBack(){
+		Player me = this.gs.getMe();
+		Player p = this.gs.getPlayers().getPreviousToMe(me.getId());
+		if(p!=null && p!=this.gs.getMe()){
+			Message m = new Message(me.getRmiName(), p.getRmiName(), me.getAddress(), p.getAddress(), Message.MSG_IS_ALIVE, null);
+			synchronized(this.gs.getEnvironment().getWriteBuffer()){
+				this.gs.getEnvironment().getWriteBuffer().add(m);
+				this.gs.getEnvironment().getWriteBuffer().notify();
+			}
+		}
+	}
 		
 	private void checkForNextAlive(){
 		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());

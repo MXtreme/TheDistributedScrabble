@@ -174,4 +174,17 @@ public class PlayerList implements Serializable{
 		}
 		return null;
 	}
+
+	public Player getPreviousToMe(int id) {
+		if(players.size() < 2){
+			return null;
+		}
+		Player back = new Player("", "", "", 0);
+		
+		for(Player p : players){
+			if(p.getId()==id && p.getId() < id && p.getId() > back.getId()) back = p;			
+		}
+		
+		return back;
+	}
 }
