@@ -52,7 +52,7 @@ public class Sender_t extends Thread {
 			case Message.MSG_END_GAME:break;
 			case Message.MSG_JOIN_GAME_REQUEST:break;
 			case Message.MSG_IS_ALIVE:	// a peer failed to check the connectivity with the host
-				gs.hostIsDead();
+				gs.peerIsDead(this.gs.getPlayers().getNextToMe(this.gs.getMe().getId()));
 				break;
 			case Message.MSG_START_GAME:break;
 			case Message.MSG_STATE_GAME:break;

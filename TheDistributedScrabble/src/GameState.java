@@ -175,7 +175,7 @@ public class GameState {
 		}
 	}
 	
-	public void hostIsDead(){
+	/*public void hostIsDead(){
 		System.out.println("The host is unreachable. It won't be forgotten :(");
 		switch(state){
 			case STATE_CONNECT:
@@ -213,7 +213,7 @@ public class GameState {
 		synchronized(this.getEnvironment()){
 			this.getEnvironment().notify();
 		}
-	}
+	}*/
 	
 	public void tellToNextToStart(){
 		if(this.me.getId() == GameState.MAX_N_PLAYERS) return;
