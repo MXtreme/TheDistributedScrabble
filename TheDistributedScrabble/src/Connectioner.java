@@ -87,7 +87,7 @@ public class Connectioner extends Thread {
 		Player me = this.gs.getMe();
 		Player p = this.gs.getPlayers().getPreviousToMe(me.getId());
 		if(p!=null && p!=this.gs.getMe()){
-			Message m = new Message(me.getRmiName(), p.getRmiName(), me.getAddress(), p.getAddress(), Message.MSG_IS_ALIVE, null);
+			Message m = new Message(me.getRmiName(), p.getName(), me.getAddress(), p.getAddress(), Message.MSG_IS_ALIVE, null);
 			synchronized(this.gs.getEnvironment().getWriteBuffer()){
 				this.gs.getEnvironment().getWriteBuffer().add(m);
 				this.gs.getEnvironment().getWriteBuffer().notify();
