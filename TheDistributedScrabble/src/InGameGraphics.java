@@ -744,7 +744,7 @@ public class InGameGraphics extends GameGraphics {
 	
 	private void refreshScore(String player_name, int score){
 		int i = 0;
-		while(!label_p[i].getText().equals(player_name))i++;
+		while(i<GameState.MAX_N_PLAYERS && !label_p[i].getText().equals(player_name))i++;
 		label_score[i].setText(Integer.toString(score));
 	}
 	
