@@ -174,17 +174,26 @@ public class PlayerList implements Serializable{
 		}
 		return null;
 	}
-
+	
+	public Player getPlayerByID(int id){
+		for(Player p : this.players){
+			if(p.getId()==id)return p;
+		}
+		return null;
+	}
+	
 	public Player getPreviousToMe(int id) {
 		if(players.size() < 2){
 			return null;
 		}
-		Player back = new Player("", "", "", 0);
+		/*Player back = new Player("", "", "", 0);
 		
 		for(Player p : players){
 			if(p.getId()!=id && p.getId() < id && p.getId() > back.getId()) back = p;			
 		}
+		*/
 		
-		return back;
+		if(this.players.indexOf(getPlayerByID(id))>0)return this.players.elementAt(this.players.indexOf((getPlayerByID(id)))-1);
+		else return this.players.elementAt(this.players.size()-1);
 	}
 }
