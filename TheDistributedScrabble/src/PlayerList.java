@@ -182,7 +182,7 @@ public class PlayerList implements Serializable{
 		Player back = new Player("", "", "", 0);
 		
 		for(Player p : players){
-			if(p.getId()==id && p.getId() < id && p.getId() > back.getId()) back = p;			
+			if(p.getId()!=id && p.getId() < id && p.getId() > back.getId()) back = p;			
 		}
 		
 		return back;
