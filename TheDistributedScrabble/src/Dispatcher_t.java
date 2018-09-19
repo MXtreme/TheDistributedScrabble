@@ -173,6 +173,7 @@ public class Dispatcher_t extends Thread {
 			Player p = new Player(current.getSender(), current.getSender(), current.getAddressSender(), gs.getNumPlayers());
 			p.setLastSeen();
 			this.gs.addNewPlayer(p);
+			if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
 			data.add(gs.getNumPlayers());
 			data.add(gs.getMe().getName());
 			data.add("Welcome to the lobby. Let's wait for others to join.");

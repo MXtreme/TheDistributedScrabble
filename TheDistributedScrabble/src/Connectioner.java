@@ -17,7 +17,7 @@ public class Connectioner extends Thread {
 	
 		@Override
 	public synchronized void run(){
-			Vector<Player> pl = this.gs.getPlayers().getPlayers();
+            PlayerList pl = this.gs.getPlayers();
 			while (!end) {
 				try {
 	                synchronized(this) {
@@ -31,13 +31,13 @@ public class Connectioner extends Thread {
 				try {
 					this.wait(DEFAULT_TIMEOUT);
 					if(TheDistributedScrabble.DEBUG)System.out.println("Connectioner: wait finished");
-					pl = this.gs.getPlayers().getPlayers();
+					pl = this.gs.getPlayers();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}synchronized(pl){
 					if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
-					if(!pl.isEmpty()){
-						pingToBack();
+					if(!pl.getPlayers().isEmpty()){
+						pingToBack(pl);
 						checkForNextAlive();
 					}
 				}
@@ -83,9 +83,9 @@ public class Connectioner extends Thread {
 	}
 		*/
 		
-	private void pingToBack(){
+	private void pingToBack(PlayerList pl){
 		Player me = this.gs.getMe();
-		Player p = this.gs.getPlayers().getPreviousToMe(me.getId());
+		Player p = pl.getPreviousToMe(me.getId());
 		if(p!=null && p!=this.gs.getMe()){
 			Message m = new Message(me.getRmiName(), p.getRmiName(), me.getAddress(), p.getAddress(), Message.MSG_IS_ALIVE, null);
 			synchronized(this.gs.getEnvironment().getWriteBuffer()){
