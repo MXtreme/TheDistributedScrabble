@@ -43,7 +43,7 @@ public class Sender_t extends Thread {
 	}
 	
 	private void cantSend(){
-		if(TheDistributedScrabble.DEBUG)System.out.println("Couldn't send message to " + current.getAddressSender() + " of type " + current.getType());
+		if(TheDistributedScrabble.DEBUG)System.out.println("Couldn't send message to " + current.getAddressDest() + " of type " + current.getType());
 		switch(current.getType()){
 			case Message.MSG_OK:break;
 			case Message.MSG_ACK:break;
