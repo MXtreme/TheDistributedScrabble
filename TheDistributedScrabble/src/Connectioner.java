@@ -87,6 +87,7 @@ public class Connectioner extends Thread {
 		Player me = this.gs.getMe();
 		Player p = pl.getPreviousToMe(me.getId());
 		if(TheDistributedScrabble.DEBUG)pl.listPlayers();
+		if(TheDistributedScrabble.DEBUG)System.out.println("The previous is " + p.getRmiName() + "@" + p.getAddress());
 		if(p!=null && p!=this.gs.getMe()){
 			Message m = new Message(me.getRmiName(), p.getRmiName(), me.getAddress(), p.getAddress(), Message.MSG_IS_ALIVE, null);
 			synchronized(this.gs.getEnvironment().getWriteBuffer()){
