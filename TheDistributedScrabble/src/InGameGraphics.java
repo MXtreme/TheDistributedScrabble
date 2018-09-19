@@ -956,9 +956,16 @@ public class InGameGraphics extends GameGraphics {
 					this.gs.sendMove(m);
 					cleanAnchors();
 					removeUsedLetters();
+					//deselectAll();
 					deselectUsedLetters(row, anchor1_x, anchor2_x, anchor1_y, anchor2_y);
 					setTheMove(m);
-				}else System.out.println("Not legal move: " + word + "b:" + b + " :(");
+				}else{
+					System.out.println("Not legal move: " + word + " b: " + b + " :(");
+					cleanAnchors();
+					removeUsedLetters();
+					//deselectAll();
+					deselectUsedLetters(row, anchor1_x, anchor2_x, anchor1_y, anchor2_y);
+				}
 			}
 			row = col = false;
 			anchor1_x = 8;
