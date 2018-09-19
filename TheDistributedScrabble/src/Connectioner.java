@@ -14,7 +14,36 @@ public class Connectioner extends Thread {
 		end = false;
 		thread_suspended = true;
 	}
-		
+	
+		@Override
+	public synchronized void run(){
+			Vector<Player> pl = this.gs.getPlayers().getPlayers();
+			while (!end) {
+				try {
+	                synchronized(this) {
+	                    while (thread_suspended)
+	                        wait();
+	                    if(TheDistributedScrabble.DEBUG)System.out.println("Out of suspend");
+	                }
+	            } catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				try {
+					this.wait(DEFAULT_TIMEOUT);
+					if(TheDistributedScrabble.DEBUG)System.out.println("Connectioner: wait finished");
+					pl = this.gs.getPlayers().getPlayers();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}synchronized(pl){
+					if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
+					if(!pl.isEmpty()){
+						checkForNextAlive();
+					}
+				}
+			}
+	}
+	
+		/*
 		@Override
 	public synchronized void run() {
 		Vector<Player> pl = this.gs.getPlayers().getPlayers();
@@ -51,7 +80,17 @@ public class Connectioner extends Thread {
 			}
 		}
 	}
+		*/
 		
+	private void checkForNextAlive(){
+		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
+		long time = System.currentTimeMillis() - p.getLastSeen();
+		if (time >= (2*DEFAULT_TIMEOUT)) { // peer is probably dead
+			gs.peerIsDead(p);
+		}
+	}	
+		
+	/*	
 	private boolean checkForPeersAlive(){
 		Vector<Player> pl = this.gs.getPlayers().getPlayers();
 		for(Player p : pl){
@@ -66,7 +105,7 @@ public class Connectioner extends Thread {
 			}
 		}
 		return false;
-	}
+	}*/
 		
 	public synchronized void end(){
 		end = true;
