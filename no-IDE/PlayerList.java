@@ -80,13 +80,14 @@ public class PlayerList implements Serializable{
 			return null;
 		}
 		
-		Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
-		
+		//Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
+		/*
 		for(Player p : players){
 			if(p.getId() > id && p.getId() < next.getId()) next = p;			
-		}
-		
-		return next;
+		}		
+		return next;*/
+		if(this.players.indexOf(getPlayerByID(id))<GameState.MAX_N_PLAYERS)return this.players.elementAt(this.players.indexOf((getPlayerByID(id)))+1);
+		else return this.players.elementAt(0);
 	}
 	
 	public Vector<Player> getPlayers(){
