@@ -452,6 +452,7 @@ public class GameState {
 	}
 	
 	public boolean isAlive(Player p){
+		if(TheDistributedScrabble.DEBUG)System.out.println("Is it alive?");
 		boolean b = this.rmi.checkIfPlayerIsAlive(p);
 		if(TheDistributedScrabble.DEBUG)System.out.println("My next peer is " + b);
 		return b;
