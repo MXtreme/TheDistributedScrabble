@@ -145,7 +145,8 @@ public class GameState {
 	public void removePeer(Player p){
 		this.num_players--;
 		this.players.removeElement(p);
-		this.gui.getInGameGraphics().clientExitus(p.getName());
+		if(this.gui.getInGameGraphics()!=null)
+			this.gui.getInGameGraphics().clientExitus(p.getName());
 	}
 	
 	public void peerIsDead(Player p){
