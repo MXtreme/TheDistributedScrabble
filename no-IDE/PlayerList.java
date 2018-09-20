@@ -86,7 +86,7 @@ public class PlayerList implements Serializable{
 			if(p.getId() > id && p.getId() < next.getId()) next = p;			
 		}		
 		return next;*/
-		if(this.players.indexOf(getPlayerByID(id))<GameState.MAX_N_PLAYERS)return this.players.elementAt(this.players.indexOf((getPlayerByID(id)))+1);
+		if(this.players.indexOf(getPlayerByID(id))+1<=GameState.MAX_N_PLAYERS)return this.players.elementAt(this.players.indexOf((getPlayerByID(id)))+1);
 		else return this.players.elementAt(0);
 	}
 	
