@@ -450,4 +450,8 @@ public class GameState {
 		this.gui.getInGameGraphics().refreshLetters(this.me.getHand());
 		
 	}
+	
+	public boolean isAlive(Player p){
+		return this.rmi.checkIfPlayerIsAlive(p);
+	}
 }

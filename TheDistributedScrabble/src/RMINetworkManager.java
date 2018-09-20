@@ -38,6 +38,11 @@ public class RMINetworkManager implements INetworkManager {
 		}
 	}
 	
+	@Override
+	public boolean isAlive(){
+		return true;
+	}
+	
 	public boolean selfExport(){
 		System.out.println("Exporting myself.");
 		try {
@@ -107,6 +112,23 @@ public class RMINetworkManager implements INetworkManager {
 		return false;
 	}
 	
+	public boolean checkIfPlayerIsAlive(Player p){
+		Registry registry;
+		try {
+			if(TheDistributedScrabble.DEBUG)System.out.println("Checking if "+ p.getName() + " is alive @ " + p.getAddress());
+			registry = LocateRegistry.getRegistry(p.getAddress(), 2336);
+			if(TheDistributedScrabble.DEBUG)System.out.println("Registry of " + p.getName() + " located.");
+			INetworkManager rminm = (INetworkManager) registry.lookup(p.getRmiName());
+			if(TheDistributedScrabble.DEBUG)System.out.println("Found rmi " + p.getRmiName() + ".");
+			return rminm.isAlive();
+		}catch(RemoteException e){
+			e.printStackTrace();
+		}
+		catch(NotBoundException e){
+			e.printStackTrace();
+		}
+		return false;
+	}
 	
 	public boolean sendMessage(Message m){
 		Registry registry;
@@ -116,11 +138,11 @@ public class RMINetworkManager implements INetworkManager {
 			if(TheDistributedScrabble.DEBUG)System.out.println("Sending to "+ dest + " type: " + m.getType() + " at address " + ip);
 			registry = LocateRegistry.getRegistry(ip, 2336);
 			if(TheDistributedScrabble.DEBUG)System.out.println("Registry of " + dest + " located.");
-	        INetworkManager rminm = (INetworkManager) registry.lookup(dest);
-	        if(TheDistributedScrabble.DEBUG)System.out.println("Found rmi " + dest + ".");
-	        rminm.manageMsg(m);
-	        if(TheDistributedScrabble.DEBUG)System.out.println("Sent message.");
-	        if(TheDistributedScrabble.DEBUG)if(m.getType()==Message.MSG_ACK)close();
+	        	INetworkManager rminm = (INetworkManager) registry.lookup(dest);
+	        	if(TheDistributedScrabble.DEBUG)System.out.println("Found rmi " + dest + ".");
+	        	rminm.manageMsg(m);
+	        	if(TheDistributedScrabble.DEBUG)System.out.println("Sent message.");
+	        	if(TheDistributedScrabble.DEBUG)if(m.getType()==Message.MSG_ACK)close();
 			return true;
 		} catch (RemoteException e) {
 			e.printStackTrace();

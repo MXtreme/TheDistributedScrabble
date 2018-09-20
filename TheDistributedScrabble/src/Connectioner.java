@@ -37,11 +37,20 @@ public class Connectioner extends Thread {
 				}synchronized(pl){
 					if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
 					if(!pl.getPlayers().isEmpty()){
-						pingToBack(pl);
-						checkForNextAlive();
+						pingToNext(pl);
 					}
 				}
 			}
+	}
+		
+	private void pingToNext(PlayerList pl){
+		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
+		if(TheDistributedScrabble.DEBUG)pl.listPlayers();
+		if(p!= null && TheDistributedScrabble.DEBUG)System.out.println("The next to me is " + p.getRmiName() + "@" + p.getAddress());
+		if(p!=null && p!=this.gs.getMe()){
+			if(!this.gs.isAlive(p));
+			gs.peerIsDead(p);
+		}
 	}
 		
 		/*
@@ -83,6 +92,7 @@ public class Connectioner extends Thread {
 	}
 		*/
 		
+		/*
 	private void pingToBack(PlayerList pl){
 		Player me = this.gs.getMe();
 		Player p = pl.getPreviousToMe(me.getId());
@@ -106,7 +116,7 @@ public class Connectioner extends Thread {
 			}
 		}
 	}	
-		
+	*/	
 	/*	
 	private boolean checkForPeersAlive(){
 		Vector<Player> pl = this.gs.getPlayers().getPlayers();
