@@ -46,10 +46,12 @@ public class Connectioner extends Thread {
 	private void pingToNext(PlayerList pl){
 		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
 		if(TheDistributedScrabble.DEBUG)pl.listPlayers();
-		if(p!= null && TheDistributedScrabble.DEBUG)System.out.println("The next to me is " + p.getRmiName() + "@" + p.getAddress());
+		if(p!= null && TheDistributedScrabble.DEBUG)System.out.println("The next to me is " + p.getRmiName() + " @ " + p.getAddress());
 		if(p!=null && p!=this.gs.getMe()){
-			if(!this.gs.isAlive(p));
-			gs.peerIsDead(p);
+			boolean b = this.gs.isAlive(p);
+			if(TheDistributedScrabble.DEBUG)System.out.println("Connectioner: The next is " + b);
+			if(!b)
+				this.gs.peerIsDead(p);
 		}
 	}
 		
