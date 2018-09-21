@@ -19,18 +19,18 @@ public class Connectioner extends Thread {
 	public synchronized void run(){
 			while (!end) {
 				try {
-	                synchronized(this) {
-	                    while (thread_suspended)
-	                        wait();
-	                    if(TheDistributedScrabble.DEBUG)System.out.println("Out of suspend");
-	                }
-	            } catch (InterruptedException e) {
+	               	synchronized(this) {
+	               	     while (thread_suspended)
+	               		wait();
+	                    	if(TheDistributedScrabble.DEBUG)System.out.println("Out of suspend");
+	               	}
+	            	}catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 				try {
 					this.wait(DEFAULT_TIMEOUT);
 					if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Connectioner: wait finished" + TheDistributedScrabble.ANSI_RESET);
-				} catch (InterruptedException e) {
+				}catch (InterruptedException e) {
 					e.printStackTrace();
 					//if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
 				}
@@ -40,8 +40,11 @@ public class Connectioner extends Thread {
 		
 	private void pingToNext(){
           PlayerList pl = this.gs.getPlayers();
+          if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Pinging to the next" + TheDistributedScrabble.ANSI_RESET);
           synchronized(pl){
+          	if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "In the critical section" + TheDistributedScrabble.ANSI_RESET);
 			if(!pl.getPlayers().isEmpty()){
+				if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "There are players" + TheDistributedScrabble.ANSI_RESET);
 				Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
 				if(TheDistributedScrabble.DEBUG)pl.listPlayers();
 				if(p!= null && TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "The next to me is " + p.getRmiName() + " @ " + p.getAddress() + TheDistributedScrabble.ANSI_RESET);
