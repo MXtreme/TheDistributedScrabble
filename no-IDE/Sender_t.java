@@ -17,21 +17,6 @@ public class Sender_t extends Thread {
 	public void run(){
 		if(TheDistributedScrabble.DEBUG)System.out.println("Sender started.");
 		while(!end){
-			while(!buffer.isEmpty()){
-				current = buffer.firstElement();
-				doThings();
-				synchronized (buffer) {
-					buffer.remove(0);
-				}
-			}
-			try{
-				synchronized(buffer){
-					buffer.wait();
-				}
-			}catch(InterruptedException e){
-				e.printStackTrace();
-			}
-		/*
 			if(buffer.isEmpty()){
 				try{
 					synchronized(buffer){
@@ -47,7 +32,7 @@ public class Sender_t extends Thread {
 					buffer.remove(0);
 				}
 				current = null;
-			}*/
+			}
 		}
 	}
 	
