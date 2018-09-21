@@ -53,7 +53,7 @@ public class Connectioner extends Thread {
 					if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Connectioner: The next is " + b + TheDistributedScrabble.ANSI_RESET);
 					if(!b){
 						this.gs.peerIsDead(p);
-						if(TheDistributedScrabble.DEBUG)pl.listPlayers();
+						if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
 					}
 				}
 			}

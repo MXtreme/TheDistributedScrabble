@@ -84,15 +84,17 @@ public class Player implements Serializable {
 				System.out.println("Removing the letters " + s + " from the set " + getStringedHand());
 			}
 		String s2 = getStringedHand();
+		if(TheDistributedScrabble.DEBUG)System.out.print("Removing: ");
 		for(int i=0;i<s.length();i++){
 			for(int j=0;j<s2.length();j++){
 				if(s2.charAt(j)==s.charAt(i)){
-					if(TheDistributedScrabble.DEBUG)System.out.println("Removing letter " + hand[j] + "from hand.");
+					if(TheDistributedScrabble.DEBUG)System.out.print(hand[j]);
 					hand[j]=null;
 					break;
 				}
 			}
 		}
+		if(TheDistributedScrabble.DEBUG)System.out.println();
 	}
 	
 	public void printHand(){
@@ -100,10 +102,11 @@ public class Player implements Serializable {
 		for(int i=0;i<hand.length;i++){
 			if(hand[i]!=null){
 				if(!hand[i].equals("")){
-					System.out.println(hand[i]);
+					System.out.print(hand[i]);
 				}
 			}
 		}
+		System.out.println();
 	}
 	
 	private String getStringedHand(){

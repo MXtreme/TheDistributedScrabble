@@ -17,14 +17,16 @@ public class PlayerList implements Serializable{
 	}
 	
 	public synchronized void removeElement(Player p){
-		for(int i=0;i<this.players.size();i++){
+		/*for(int i=0;i<this.players.size();i++){
 			if(this.players.elementAt(i).getName().equals(p.getName()))this.players.removeElementAt(i);
 			break;
-		}
-		/*for(Player d : players){
-			if(d.getName().equals(p.getName()))this.players.remove(d);
-			break;
 		}*/
+		for(Player d : this.players){
+			if(d.getName().equals(p.getName())){
+				this.players.remove(d);
+				break;
+			}
+		}
 	}
 	
 	public synchronized void removeHost(){
