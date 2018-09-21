@@ -17,7 +17,9 @@ public class PlayerList implements Serializable{
 	}
 	
 	public void removeElement(Player p){
-		this.players.remove(p);
+		for(Player d : players){
+			if(d.getName().equals(p.getName()))this.players.remove(d);
+		}
 	}
 	
 	public void removeHost(){

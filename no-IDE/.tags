@@ -1,0 +1,507 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Cell	Cell.java	/^	public Cell(String label, int type, int f, ImageIcon i) {$/;"	line:29
+Cell	Cell.java	/^public class Cell extends JButton implements ActionListener{$/;"	line:11
+Connectioner	Connectioner.java	/^	public Connectioner(Vector<Message> write, GameState gs){$/;"	line:11
+Connectioner	Connectioner.java	/^public class Connectioner extends Thread {$/;"	line:5
+DEBUG	TheDistributedScrabble.java	/^	static boolean DEBUG = false;$/;"	line:4
+DEFAULT_TIMEOUT	Connectioner.java	/^	private final int DEFAULT_TIMEOUT = 3000;$/;"	line:6
+DFS	TreeNode.java	/^	public void DFS(){$/;"	line:71
+DOUBLE_LETTER	Cell.java	/^	static final int DOUBLE_LETTER = 0;$/;"	line:16
+DOUBLE_WORD	Cell.java	/^	static final int DOUBLE_WORD = 1;$/;"	line:17
+Dispatcher_t	Dispatcher_t.java	/^	public Dispatcher_t(Vector<Message> v, Vector<Message> w, GameState gs){$/;"	line:9
+Dispatcher_t	Dispatcher_t.java	/^public class Dispatcher_t extends Thread {$/;"	line:3
+ENCODING	Engine.java	/^	final static Charset ENCODING = StandardCharsets.UTF_8;$/;"	line:40
+Engine	Engine.java	/^	public Engine(){$/;"	line:42
+Engine	Engine.java	/^public class Engine {$/;"	line:37
+Environment	Environment.java	/^	public Environment(int n){$/;"	line:22
+Environment	Environment.java	/^public class Environment extends Thread {$/;"	line:8
+GUI	GUI.java	/^	public GUI(String title, GameState gs) {$/;"	line:14
+GUI	GUI.java	/^public class GUI extends JFrame {$/;"	line:8
+GameGraphics	GameGraphics.java	/^	public GameGraphics(Dimension d, GameState gs) {$/;"	line:13
+GameGraphics	GameGraphics.java	/^public abstract class GameGraphics extends JPanel implements MouseListener, ActionListener {$/;"	line:9
+GameState	GameState.java	/^	public GameState(int state, RMINetworkManager rmi, int n, Environment env){$/;"	line:21
+GameState	GameState.java	/^public class GameState {$/;"	line:5
+HomeGraphics	HomeGraphics.java	/^	public HomeGraphics(Dimension d, GameState gs) {$/;"	line:41
+HomeGraphics	HomeGraphics.java	/^public class HomeGraphics extends GameGraphics {$/;"	line:29
+INetworkManager	INetworkManager.java	/^public interface INetworkManager extends Remote {$/;"	line:4
+InGameGraphics	InGameGraphics.java	/^	public InGameGraphics(Dimension d, GameState gs) {$/;"	line:42
+InGameGraphics	InGameGraphics.java	/^public class InGameGraphics extends GameGraphics {$/;"	line:29
+Letter	Letter.java	/^	public Letter(){$/;"	line:19
+Letter	Letter.java	/^	public Letter(char c, Image unselected, Image selected){$/;"	line:45
+Letter	Letter.java	/^public class Letter extends JButton {$/;"	line:8
+MAX_N_PLAYERS	GameState.java	/^	static int MAX_N_PLAYERS;$/;"	line:11
+MSG_ACK	Message.java	/^	static final int MSG_ACK = 2;$/;"	line:10
+MSG_CLIENT_EXITUS	Message.java	/^	static final int MSG_CLIENT_EXITUS = 12;$/;"	line:19
+MSG_DRAW	Message.java	/^	static final int MSG_DRAW = 11;$/;"	line:18
+MSG_END_GAME	Message.java	/^	static final int MSG_END_GAME = 5;$/;"	line:13
+MSG_ERROR	Message.java	/^	static final int MSG_ERROR = 3;$/;"	line:11
+MSG_IS_ALIVE	Message.java	/^	static final int MSG_IS_ALIVE = 8;$/;"	line:15
+MSG_JOIN_GAME_REQUEST	Message.java	/^	static final int MSG_JOIN_GAME_REQUEST = 7;$/;"	line:14
+MSG_MOVE	Message.java	/^	static final int MSG_MOVE = 4;$/;"	line:12
+MSG_OK	Message.java	/^	static final int MSG_OK = 1;$/;"	line:9
+MSG_RDY	Message.java	/^	static final int MSG_RDY = 13;$/;"	line:20
+MSG_START_GAME	Message.java	/^	static final int MSG_START_GAME = 9;$/;"	line:16
+MSG_STATE_GAME	Message.java	/^	static final int MSG_STATE_GAME = 10;$/;"	line:17
+Message	Message.java	/^	public Message(String sender, String dest, String address_sender, String address_dest, int type, Vector<Object> data){$/;"	line:27
+Message	Message.java	/^public class Message implements Serializable{$/;"	line:7
+Move	Move.java	/^	public Move(String word, int x1, int x2, int y1, int y2, int score, int player, boolean reverse) {$/;"	line:14
+Move	Move.java	/^public class Move implements Serializable{$/;"	line:5
+NORMAL	Cell.java	/^	static final int NORMAL= 4;$/;"	line:20
+Player	Player.java	/^	public Player(String name, String rmi_name, String address, int id){$/;"	line:12
+Player	Player.java	/^public class Player implements Serializable {$/;"	line:3
+PlayerList	PlayerList.java	/^	public PlayerList(){$/;"	line:11
+PlayerList	PlayerList.java	/^public class PlayerList implements Serializable{$/;"	line:4
+RMINetworkManager	RMINetworkManager.java	/^	public RMINetworkManager(Vector<Message> v, Vector<Message> write) throws RemoteException{$/;"	line:22
+RMINetworkManager	RMINetworkManager.java	/^public class RMINetworkManager implements INetworkManager {$/;"	line:15
+STATE_CONNECT	GameState.java	/^	static final int STATE_CONNECT = 2;$/;"	line:8
+STATE_GAME	GameState.java	/^	static final int STATE_GAME = 3;$/;"	line:9
+STATE_GAME_OVER	GameState.java	/^	static final int STATE_GAME_OVER = 4;$/;"	line:10
+STATE_HOST	GameState.java	/^	static final int STATE_HOST = 1;$/;"	line:7
+STATE_MENU	GameState.java	/^	static final int STATE_MENU = 0;$/;"	line:6
+Sender_t	Sender_t.java	/^	public Sender_t(Vector<Message> v, RMINetworkManager rmi, GameState gs){$/;"	line:10
+Sender_t	Sender_t.java	/^public class Sender_t extends Thread {$/;"	line:3
+TRIPLE_LETTER	Cell.java	/^	static final int TRIPLE_LETTER = 2;$/;"	line:18
+TRIPLE_WORD	Cell.java	/^	static final int TRIPLE_WORD= 3;$/;"	line:19
+TheDistributedScrabble	TheDistributedScrabble.java	/^public class TheDistributedScrabble {$/;"	line:1
+TreeNode	TreeNode.java	/^	public TreeNode(TreeNode<T> parent, T element) {$/;"	line:11
+TreeNode	TreeNode.java	/^public class TreeNode<T> {$/;"	line:6
+abort	GameState.java	/^	public void abort(){$/;"	line:339
+actionPerformed	Cell.java	/^	public void actionPerformed(ActionEvent arg0) {$/;"	line:155
+actionPerformed	GameGraphics.java	/^	public abstract void actionPerformed(ActionEvent arg0);$/;"	line:24
+actionPerformed	HomeGraphics.java	/^	public void actionPerformed(ActionEvent arg0) {$/;"	line:302
+actionPerformed	InGameGraphics.java	/^	public void actionPerformed(ActionEvent arg0) {$/;"	line:916
+add	PlayerList.java	/^	public void add(Player p){$/;"	line:15
+addChild	TreeNode.java	/^	public void addChild(T element){$/;"	line:21
+addChild	TreeNode.java	/^	public void addChild(TreeNode<T> child){$/;"	line:16
+addNewPlayer	GameState.java	/^	public void addNewPlayer(Player p){$/;"	line:327
+addPlayersCounter	GameState.java	/^	public void addPlayersCounter(){$/;"	line:331
+addScore	GameState.java	/^	public void addScore(int score){$/;"	line:335
+addToScore	Player.java	/^	public void addToScore(int n){$/;"	line:62
+additionalPoints	InGameGraphics.java	/^	private int additionalPoints(String word, int dw, int tw, int j, int score){$/;"	line:675
+address	Player.java	/^	private String name, rmi_name, address, hand[];$/;"	line:8
+address_dest	Message.java	/^	private String sender, dest, address_sender, address_dest;$/;"	line:24
+address_sender	Message.java	/^	private String sender, dest, address_sender, address_dest;$/;"	line:24
+address_text	HomeGraphics.java	/^	private JTextField address_text, player_name;$/;"	line:33
+amITheGreaterPeer	PlayerList.java	/^	public boolean amITheGreaterPeer(Player me){$/;"	line:148
+anchor1_x	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+anchor1_y	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+anchor2_x	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+anchor2_y	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+anchors	InGameGraphics.java	/^	private Vector<Cell> anchors;$/;"	line:38
+applyMove	Dispatcher_t.java	/^	private void applyMove(){$/;"	line:91
+back	HomeGraphics.java	/^	public void back(){$/;"	line:269
+backToHome	HomeGraphics.java	/^	public void backToHome() {$/;"	line:247
+bag	Engine.java	/^	private Vector<String> bag;$/;"	line:39
+bt	Environment.java	/^	JButton bt, bt2;$/;"	line:20
+bt2	Environment.java	/^	JButton bt, bt2;$/;"	line:20
+buffer	RMINetworkManager.java	/^	private Vector<Message> buffer, write;$/;"	line:16
+buffer	Sender_t.java	/^	private Vector<Message> buffer;$/;"	line:4
+button_back	HomeGraphics.java	/^	private JButton button_connect, button_exit, button_back, button_start_host;$/;"	line:34
+button_connect	HomeGraphics.java	/^	private JButton button_connect, button_exit, button_back, button_start_host;$/;"	line:34
+button_exit	HomeGraphics.java	/^	private JButton button_connect, button_exit, button_back, button_start_host;$/;"	line:34
+button_exit	InGameGraphics.java	/^	private JButton button_exit, button_pass, button_reset;$/;"	line:33
+button_pass	InGameGraphics.java	/^	private JButton button_exit, button_pass, button_reset;$/;"	line:33
+button_reset	InGameGraphics.java	/^	private JButton button_exit, button_pass, button_reset;$/;"	line:33
+button_start_host	HomeGraphics.java	/^	private JButton button_connect, button_exit, button_back, button_start_host;$/;"	line:34
+byePeer	Dispatcher_t.java	/^	private void byePeer(){$/;"	line:80
+c	Cell.java	/^	private char c;$/;"	line:27
+c	Letter.java	/^	private char c;$/;"	line:13
+cantSend	Sender_t.java	/^	private void cantSend(){$/;"	line:45
+checkIfPlayerIsAlive	RMINetworkManager.java	/^	public boolean checkIfPlayerIsAlive(Player p){$/;"	line:115
+checkMultipliers	InGameGraphics.java	/^	private void checkMultipliers(Cell c){$/;"	line:667
+checkTheCol	InGameGraphics.java	/^	private String checkTheCol(){$/;"	line:615
+checkTheRow	InGameGraphics.java	/^	private String checkTheRow(){$/;"	line:641
+checkWord	GameState.java	/^	public boolean checkWord(String word){$/;"	line:241
+children	TreeNode.java	/^	private List<TreeNode<T>> children = new ArrayList<>();$/;"	line:8
+chooseStartingPlayer	GameState.java	/^	private void chooseStartingPlayer(){$/;"	line:363
+cleanAnchors	InGameGraphics.java	/^	private void cleanAnchors(){$/;"	line:571
+clientExitus	InGameGraphics.java	/^	public void clientExitus(String name){$/;"	line:772
+client_label	HomeGraphics.java	/^	private JLabel client_label, player_label, msg_label, ip_label;$/;"	line:32
+close	RMINetworkManager.java	/^	public boolean close(){$/;"	line:97
+col	InGameGraphics.java	/^	private boolean hold = false, row = false, col = false;$/;"	line:39
+computeAnchors	InGameGraphics.java	/^	public void computeAnchors(){$/;"	line:546
+concatHands	Engine.java	/^	public String[] concatHands(String hand1[], String hand2[]){$/;"	line:252
+concatStrings	Dispatcher_t.java	/^	private String concatStrings(String s[]){$/;"	line:132
+connect	HomeGraphics.java	/^	public void connect(){$/;"	line:176
+connect	RMINetworkManager.java	/^	public boolean connect(String host_ip, String name){$/;"	line:76
+connectioner	Environment.java	/^	Connectioner connectioner;$/;"	line:13
+current	Dispatcher_t.java	/^	private Message current;$/;"	line:5
+current	Sender_t.java	/^	private Message current;$/;"	line:5
+data	Message.java	/^	private Vector<Object> data;$/;"	line:25
+deg	HomeGraphics.java	/^	private float deg = 0;$/;"	line:37
+deselect	Cell.java	/^	public void deselect(){$/;"	line:39
+deselectAll	InGameGraphics.java	/^	private void deselectAll(){$/;"	line:581
+deselectFromTable	Cell.java	/^	public void deselectFromTable(){$/;"	line:66
+deselectUsedLetters	InGameGraphics.java	/^	private void deselectUsedLetters(boolean row, int anchor1_x, int anchor2_x, int anchor1_y, int anchor2_y) {$/;"	line:348
+dest	Message.java	/^	private String sender, dest, address_sender, address_dest;$/;"	line:24
+disp	Environment.java	/^	Dispatcher_t disp;$/;"	line:10
+doThings	Dispatcher_t.java	/^	private void doThings(){$/;"	line:38
+doThings	GameState.java	/^	public void doThings(){$/;"	line:35
+doThings	Sender_t.java	/^	private void doThings(){$/;"	line:39
+draw	GameState.java	/^	public void draw(int n){$/;"	line:256
+drawTheWheel	HomeGraphics.java	/^	private void drawTheWheel(Graphics2D g2){$/;"	line:200
+dw	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+element	TreeNode.java	/^	private T element = null;$/;"	line:9
+emptyWord	GameState.java	/^	public void emptyWord(){$/;"	line:248
+end	Connectioner.java	/^	private boolean end, thread_suspended;$/;"	line:9
+end	Connectioner.java	/^	public synchronized void end(){$/;"	line:139
+end	Dispatcher_t.java	/^	private boolean end = false;$/;"	line:6
+end	Dispatcher_t.java	/^	public void end(){$/;"	line:202
+end	Environment.java	/^	boolean end;$/;"	line:15
+end	Environment.java	/^	public synchronized void end(){$/;"	line:81
+end	Sender_t.java	/^	private boolean end = false;$/;"	line:8
+end	Sender_t.java	/^	public void end(){$/;"	line:65
+end	TheDistributedScrabble.java	/^	private static boolean end = false;$/;"	line:3
+end	TheDistributedScrabble.java	/^	public static void end(){$/;"	line:42
+engine	GameState.java	/^	private Engine engine;$/;"	line:15
+env	GameState.java	/^	private Environment env;$/;"	line:16
+exitGame	GameState.java	/^	public void exitGame(){$/;"	line:356
+f	Environment.java	/^	JFrame f;$/;"	line:18
+fillHand	Player.java	/^	public void fillHand(String letters[]){$/;"	line:66
+flag	Letter.java	/^	private boolean flag = false;$/;"	line:15
+font_size	InGameGraphics.java	/^	private final int font_size;$/;"	line:31
+font_size_default	HomeGraphics.java	/^	private int font_size_default;$/;"	line:39
+gameOver	GameState.java	/^	private void gameOver(){$/;"	line:277
+gedID	Message.java	/^	Object gedID(){$/;"	line:82
+getAddress	Player.java	/^	public String getAddress(){$/;"	line:30
+getAddressDest	Message.java	/^	public String getAddressDest(){$/;"	line:78
+getAddressSender	Message.java	/^	public String getAddressSender(){$/;"	line:74
+getBag	Engine.java	/^	public Vector<String> getBag() {$/;"	line:162
+getC	Cell.java	/^	public char getC(){$/;"	line:105
+getC	Letter.java	/^	public char getC(){$/;"	line:74
+getChildAtElement	TreeNode.java	/^	public TreeNode<T> getChildAtElement(T t){$/;"	line:49
+getChildren	TreeNode.java	/^	public List<TreeNode<T>> getChildren() {$/;"	line:34
+getConnectioner	Environment.java	/^	public Connectioner getConnectioner(){$/;"	line:86
+getCopy	PlayerList.java	/^	public Vector<Player> getCopy(){$/;"	line:163
+getData	Message.java	/^	Vector<Object> getData(){$/;"	line:90
+getDest	Message.java	/^	public String getDest(){$/;"	line:70
+getElement	TreeNode.java	/^	public T getElement() {$/;"	line:63
+getEnd	Dispatcher_t.java	/^	public boolean getEnd(){$/;"	line:198
+getEngine	GameState.java	/^	public Engine getEngine(){$/;"	line:422
+getEnvironment	GameState.java	/^	public Environment getEnvironment(){$/;"	line:414
+getFirst	PlayerList.java	/^	public Player getFirst(){$/;"	line:29
+getHand	Player.java	/^	public String[] getHand(){$/;"	line:130
+getHome	GUI.java	/^	public HomeGraphics getHome(){$/;"	line:61
+getHostIP	HomeGraphics.java	/^	public String getHostIP() {$/;"	line:243
+getIP	RMINetworkManager.java	/^	private String getIP(){$/;"	line:155
+getId	Player.java	/^	public int getId(){$/;"	line:34
+getInGameGraphics	GUI.java	/^	public InGameGraphics getInGameGraphics(){$/;"	line:65
+getLabelByPlayerName	InGameGraphics.java	/^	public int getLabelByPlayerName(String name){$/;"	line:777
+getLastSeen	Player.java	/^	public long getLastSeen(){$/;"	line:117
+getLetter	Cell.java	/^	public Letter getLetter(){$/;"	line:128
+getLetterIndex	InGameGraphics.java	/^	private int getLetterIndex(char c){$/;"	line:390
+getMaximumSize	InGameGraphics.java	/^    public Dimension getMaximumSize() {$/;"	line:331
+getMe	GameState.java	/^	public Player getMe(){$/;"	line:386
+getMinimumSize	InGameGraphics.java	/^    public Dimension getMinimumSize() {$/;"	line:309
+getMonitor	TheDistributedScrabble.java	/^	public static Object getMonitor(){$/;"	line:38
+getMyAddress	GameState.java	/^	public String getMyAddress(){$/;"	line:402
+getMyIP	RMINetworkManager.java	/^	public String getMyIP(){$/;"	line:174
+getMyName	GameState.java	/^	public String getMyName(){$/;"	line:398
+getName	Player.java	/^	public String getName(){$/;"	line:22
+getName	RMINetworkManager.java	/^	public String getName(){$/;"	line:178
+getNewLetters	Engine.java	/^	public String[] getNewLetters(int n_letters) {$/;"	line:147
+getNextToMe	PlayerList.java	/^	public Player getNextToMe(int id){$/;"	line:78
+getNickname	HomeGraphics.java	/^	public String getNickname(){$/;"	line:196
+getNumPlayers	GameState.java	/^	public int getNumPlayers(){$/;"	line:406
+getNumberOfLetters	Player.java	/^	public int getNumberOfLetters(){$/;"	line:121
+getParent	TreeNode.java	/^	public TreeNode<T> getParent() {$/;"	line:26
+getPlayer	Move.java	/^	public int getPlayer() {$/;"	line:63
+getPlayerByID	PlayerList.java	/^	public Player getPlayerByID(int id){$/;"	line:179
+getPlayerByName	PlayerList.java	/^	public Player getPlayerByName(String name){$/;"	line:172
+getPlayerNameByID	PlayerList.java	/^	public String getPlayerNameByID(int n){$/;"	line:61
+getPlayerNameByNumber	GameState.java	/^	public String getPlayerNameByNumber(int n){$/;"	line:410
+getPlayerWithAddress	PlayerList.java	/^	public Player getPlayerWithAddress(String address){$/;"	line:40
+getPlayerWithId	PlayerList.java	/^	public Player getPlayerWithId(int id){$/;"	line:47
+getPlayerWithName	PlayerList.java	/^	public Player getPlayerWithName(String name){$/;"	line:33
+getPlayers	GameState.java	/^	public PlayerList getPlayers(){$/;"	line:390
+getPlayers	PlayerList.java	/^	public Vector<Player> getPlayers(){$/;"	line:93
+getPlayersNameList	PlayerList.java	/^	public String[] getPlayersNameList(){$/;"	line:68
+getPlayingPlayer	GameState.java	/^	public int getPlayingPlayer(){$/;"	line:418
+getPoints	Cell.java	/^	public int getPoints(int score){$/;"	line:144
+getPoints	Letter.java	/^	public int getPoints(){$/;"	line:94
+getPreferredSize	InGameGraphics.java	/^    public Dimension getPreferredSize() {$/;"	line:320
+getPreviousToMe	PlayerList.java	/^	public Player getPreviousToMe(int id) {$/;"	line:186
+getRmiName	Player.java	/^	public String getRmiName(){$/;"	line:26
+getScore	Move.java	/^	public int getScore(){$/;"	line:55
+getScore	Player.java	/^	public int getScore(){$/;"	line:38
+getSender	Message.java	/^	public String getSender(){$/;"	line:66
+getState	GameState.java	/^	public int getState(){$/;"	line:394
+getStringedHand	Player.java	/^	private String getStringedHand(){$/;"	line:109
+getTheHost	PlayerList.java	/^	public Player getTheHost(){$/;"	line:54
+getType	Cell.java	/^	public int getType(){$/;"	line:120
+getType	Message.java	/^	int getType(){$/;"	line:86
+getVocabular	Engine.java	/^	public TreeNode<Character> getVocabular() {$/;"	line:158
+getWord	InGameGraphics.java	/^	private String getWord(){$/;"	line:595
+getWord	Move.java	/^	public String getWord() {$/;"	line:24
+getWriteBuffer	Environment.java	/^	public Vector<Message> getWriteBuffer(){$/;"	line:90
+getX1	Move.java	/^	public int getX1() {$/;"	line:30
+getX2	Move.java	/^	public int getX2() {$/;"	line:36
+getY1	Move.java	/^	public int getY1() {$/;"	line:42
+getY2	Move.java	/^	public int getY2() {$/;"	line:48
+go	Connectioner.java	/^	public synchronized void go(){$/;"	line:160
+gs	Connectioner.java	/^	private GameState gs;$/;"	line:8
+gs	Dispatcher_t.java	/^	private GameState gs;$/;"	line:7
+gs	Environment.java	/^	GameState gs;$/;"	line:14
+gs	GUI.java	/^	private GameState gs;$/;"	line:10
+gs	GameGraphics.java	/^	GameState gs;$/;"	line:11
+gs	Sender_t.java	/^	private GameState gs;$/;"	line:7
+gui	GameState.java	/^	private GUI gui;$/;"	line:17
+hailToTheWinner	InGameGraphics.java	/^	public void hailToTheWinner(int winning_player){$/;"	line:751
+hand	Player.java	/^	private String name, rmi_name, address, hand[];$/;"	line:8
+hasChildren	TreeNode.java	/^	public boolean hasChildren(){$/;"	line:45
+hasChildrenWithElement	TreeNode.java	/^	public boolean hasChildrenWithElement(T t){$/;"	line:38
+hg	GUI.java	/^	private HomeGraphics hg;$/;"	line:11
+hold	InGameGraphics.java	/^	private boolean hold = false, row = false, col = false;$/;"	line:39
+holder	InGameGraphics.java	/^	private Letter label_letters[], holder;$/;"	line:37
+host	HomeGraphics.java	/^	public void host(){$/;"	line:149
+hosting	GameState.java	/^	private boolean hosting;$/;"	line:19
+i	Cell.java	/^	ImageIcon i;$/;"	line:23
+id	Message.java	/^	private Object id;$/;"	line:22
+id	Player.java	/^	private int id, score;$/;"	line:9
+igg	GUI.java	/^	private InGameGraphics igg;$/;"	line:12
+img	InGameGraphics.java	/^	private Image img[], imgs[], mult[];$/;"	line:32
+img_background	HomeGraphics.java	/^	private BufferedImage img_background, img_wheel;$/;"	line:31
+img_wheel	HomeGraphics.java	/^	private BufferedImage img_background, img_wheel;$/;"	line:31
+imgs	InGameGraphics.java	/^	private Image img[], imgs[], mult[];$/;"	line:32
+initGUI	InGameGraphics.java	/^	public void initGUI(){$/;"	line:77
+initTheBag	Engine.java	/^	private void initTheBag(){$/;"	line:52
+initVocabular	Engine.java	/^	private void initVocabular(){$/;"	line:88
+inm	Environment.java	/^	RMINetworkManager inm;$/;"	line:12
+ip_label	HomeGraphics.java	/^	private JLabel client_label, player_label, msg_label, ip_label;$/;"	line:32
+isAlive	GameState.java	/^	public boolean isAlive(Player p){$/;"	line:455
+isAlive	INetworkManager.java	/^	boolean isAlive()throws RemoteException;$/;"	line:6
+isAlive	RMINetworkManager.java	/^	public boolean isAlive(){$/;"	line:42
+isHosting	GameState.java	/^	public boolean isHosting(){$/;"	line:426
+isInteger	TheDistributedScrabble.java	/^	private static boolean isInteger(String str) {$/;"	line:46
+isLegalWord	Engine.java	/^	public boolean isLegalWord(String s, int i, TreeNode<Character> t)throws NullPointerException{$/;"	line:166
+isMyTurn	GameState.java	/^	public boolean isMyTurn(){$/;"	line:430
+isReverse	Move.java	/^	public boolean isReverse(){$/;"	line:67
+isSelected	Cell.java	/^	public boolean isSelected(){$/;"	line:97
+isSelected	Letter.java	/^	public boolean isSelected(){$/;"	line:78
+isSuspended	Connectioner.java	/^	public boolean isSuspended(){$/;"	line:143
+isThereAPlayerWithThisId	PlayerList.java	/^	public boolean isThereAPlayerWithThisId(int n){$/;"	line:141
+isUp	HomeGraphics.java	/^    public boolean isUp(){$/;"	line:286
+isUsed	Cell.java	/^	public boolean isUsed(){$/;"	line:140
+j	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+joinRequest	Dispatcher_t.java	/^	private void joinRequest(){$/;"	line:167
+label_letters	InGameGraphics.java	/^	private Letter label_letters[], holder;$/;"	line:37
+label_p	InGameGraphics.java	/^	private JLabel label_playing_player, label_title, label_p[], label_score[];$/;"	line:34
+label_playing_player	InGameGraphics.java	/^	private JLabel label_playing_player, label_title, label_p[], label_score[];$/;"	line:34
+label_score	InGameGraphics.java	/^	private JLabel label_playing_player, label_title, label_p[], label_score[];$/;"	line:34
+label_title	InGameGraphics.java	/^	private JLabel label_playing_player, label_title, label_p[], label_score[];$/;"	line:34
+last_seen	Player.java	/^	private long last_seen;$/;"	line:10
+letter	Cell.java	/^	Letter letter;$/;"	line:24
+listPlayers	PlayerList.java	/^	public void listPlayers(){$/;"	line:97
+loadImages	HomeGraphics.java	/^	private void loadImages(){$/;"	line:52
+loadImages	InGameGraphics.java	/^	private void loadImages(){$/;"	line:54
+main	TheDistributedScrabble.java	/^	public static void main(String[] args) {$/;"	line:6
+manageMsg	INetworkManager.java	/^	void manageMsg(Message m) throws RemoteException;$/;"	line:5
+manageMsg	RMINetworkManager.java	/^	public void manageMsg(Message m) {$/;"	line:34
+me	GameState.java	/^	private Player me;$/;"	line:14
+menu	HomeGraphics.java	/^	public void menu(){		$/;"	line:63
+monitor	TheDistributedScrabble.java	/^	private static final Object monitor = new Object();$/;"	line:2
+mouseClicked	GameGraphics.java	/^	public abstract void mouseClicked(MouseEvent arg0);$/;"	line:27
+mouseClicked	HomeGraphics.java	/^	public void mouseClicked(MouseEvent arg0) {$/;"	line:328
+mouseClicked	InGameGraphics.java	/^	public void mouseClicked(MouseEvent arg0) {$/;"	line:787
+mouseEntered	GameGraphics.java	/^	public abstract void mouseEntered(MouseEvent arg0);$/;"	line:30
+mouseEntered	HomeGraphics.java	/^	public void mouseEntered(MouseEvent arg0) {$/;"	line:333
+mouseEntered	InGameGraphics.java	/^	public void mouseEntered(MouseEvent arg0) {$/;"	line:863
+mouseExited	GameGraphics.java	/^	public abstract void mouseExited(MouseEvent arg0);$/;"	line:33
+mouseExited	HomeGraphics.java	/^	public void mouseExited(MouseEvent arg0) {$/;"	line:343
+mouseExited	InGameGraphics.java	/^	public void mouseExited(MouseEvent arg0) {$/;"	line:890
+mousePressed	GameGraphics.java	/^	public abstract void mousePressed(MouseEvent arg0);$/;"	line:36
+mousePressed	HomeGraphics.java	/^	public void mousePressed(MouseEvent arg0) {$/;"	line:352
+mousePressed	InGameGraphics.java	/^	public void mousePressed(MouseEvent arg0) {$/;"	line:985
+mouseReleased	GameGraphics.java	/^	public abstract void mouseReleased(MouseEvent arg0);$/;"	line:39
+mouseReleased	HomeGraphics.java	/^	public void mouseReleased(MouseEvent arg0) {$/;"	line:357
+mouseReleased	InGameGraphics.java	/^	public void mouseReleased(MouseEvent arg0) {$/;"	line:991
+msg_label	HomeGraphics.java	/^	private JLabel client_label, player_label, msg_label, ip_label;$/;"	line:32
+mult	InGameGraphics.java	/^	private Image img[], imgs[], mult[];$/;"	line:32
+myIp	RMINetworkManager.java	/^	private String myIp;$/;"	line:17
+myName	RMINetworkManager.java	/^	private String myName;$/;"	line:20
+myRegistry	RMINetworkManager.java	/^	private Registry myRegistry;$/;"	line:19
+name	Player.java	/^	private String name, rmi_name, address, hand[];$/;"	line:8
+nextPlayingPlayer	GameState.java	/^	public void nextPlayingPlayer(){$/;"	line:434
+nextTurn	GameState.java	/^	public void nextTurn(){$/;"	line:307
+num_players	GameState.java	/^	private int state, num_players, playing_player, zero_score;$/;"	line:18
+offset	HomeGraphics.java	/^	int offset;$/;"	line:36
+p	Environment.java	/^	JPanel p;$/;"	line:19
+paint	InGameGraphics.java	/^	public void paint(Graphics g){$/;"	line:342
+paintComponent	HomeGraphics.java	/^	protected void paintComponent(Graphics g){$/;"	line:291
+panel_bottom	InGameGraphics.java	/^	private JPanel panel_top, panel_left, panel_bottom, panel_right, panel_hand;$/;"	line:35
+panel_hand	InGameGraphics.java	/^	private JPanel panel_top, panel_left, panel_bottom, panel_right, panel_hand;$/;"	line:35
+panel_left	InGameGraphics.java	/^	private JPanel panel_top, panel_left, panel_bottom, panel_right, panel_hand;$/;"	line:35
+panel_right	InGameGraphics.java	/^	private JPanel panel_top, panel_left, panel_bottom, panel_right, panel_hand;$/;"	line:35
+panel_top	InGameGraphics.java	/^	private JPanel panel_top, panel_left, panel_bottom, panel_right, panel_hand;$/;"	line:35
+parent	TreeNode.java	/^	private TreeNode<T> parent = null;$/;"	line:7
+peerIsDead	GameState.java	/^	public void peerIsDead(Player p){$/;"	line:152
+pingToNext	Connectioner.java	/^	private void pingToNext(PlayerList pl){$/;"	line:46
+player	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+playerAlive	Dispatcher_t.java	/^	private void playerAlive(){$/;"	line:140
+playerList	InGameGraphics.java	/^	public void playerList(String names[]){$/;"	line:696
+player_label	HomeGraphics.java	/^	private JLabel client_label, player_label, msg_label, ip_label;$/;"	line:32
+player_name	HomeGraphics.java	/^	private JTextField address_text, player_name;$/;"	line:33
+players	GameState.java	/^	private PlayerList players;$/;"	line:13
+players	PlayerList.java	/^	private Vector<Player> players;$/;"	line:9
+playingPlayer	InGameGraphics.java	/^	public void playingPlayer(String name, boolean my_turn){$/;"	line:708
+playing_player	GameState.java	/^	private int state, num_players, playing_player, zero_score;$/;"	line:18
+points	Letter.java	/^	private int points;$/;"	line:16
+points	Letter.java	/^	public static int points(char c){$/;"	line:27
+popup	HomeGraphics.java	/^	private boolean wheel = false, popup = false, up = false;$/;"	line:35
+printHand	Player.java	/^	public void printHand(){$/;"	line:98
+read	Dispatcher_t.java	/^	private Vector<Message> read, write;$/;"	line:4
+read	Environment.java	/^	Vector<Message> read, write;$/;"	line:9
+recomputeAnchors	InGameGraphics.java	/^	public void recomputeAnchors(int x, int y, Cell c){$/;"	line:459
+recomputeAnchors2	InGameGraphics.java	/^	public void recomputeAnchors2(int x, int y, Cell c){$/;"	line:438
+redrawTable	InGameGraphics.java	/^	public void redrawTable(char tab[][]){$/;"	line:687
+refresh	PlayerList.java	/^	public void refresh(Vector<Player> pl){$/;"	line:108
+refreshHand	GameState.java	/^	public void refreshHand() {$/;"	line:450
+refreshHostingScreen	GameState.java	/^	public void refreshHostingScreen(){$/;"	line:323
+refreshJoiningPlayers	HomeGraphics.java	/^	public void refreshJoiningPlayers(){$/;"	line:234
+refreshLetters	InGameGraphics.java	/^	public void refreshLetters(String letters[]){$/;"	line:364
+refreshPlayersList	GameState.java	/^	public void refreshPlayersList(Vector<Player> pl){$/;"	line:319
+refreshScore	InGameGraphics.java	/^	private void refreshScore(String player_name, int score){$/;"	line:745
+reinitialize	Environment.java	/^	public void reinitialize(){$/;"	line:74
+removeElement	PlayerList.java	/^	public void removeElement(Player p){$/;"	line:19
+removeHost	PlayerList.java	/^	public void removeHost(){$/;"	line:23
+removeLetterFromHand	Player.java	/^	public void removeLetterFromHand(String s){$/;"	line:81
+removeLetters	Engine.java	/^	public void removeLetters(String s){$/;"	line:240
+removeLetters	Engine.java	/^	public void removeLetters(String s[]){$/;"	line:233
+removeLetters	GameState.java	/^	public void removeLetters(String s){$/;"	line:315
+removePeer	GameState.java	/^	public void removePeer(Player p){$/;"	line:145
+removeUsedLetters	InGameGraphics.java	/^	private void removeUsedLetters(){$/;"	line:738
+requestAccepted	Dispatcher_t.java	/^	private void requestAccepted(){$/;"	line:150
+reset	Letter.java	/^	public void reset(){$/;"	line:82
+reset	PlayerList.java	/^	public void reset(){$/;"	line:104
+resetTheBag	Engine.java	/^	public void resetTheBag(){$/;"	line:247
+resort	PlayerList.java	/^	public void resort(){$/;"	line:125
+resumeToMenu	GameState.java	/^	public void resumeToMenu(){$/;"	line:347
+reverse	Move.java	/^	private boolean reverse;$/;"	line:12
+rmi	GameState.java	/^	private RMINetworkManager rmi;$/;"	line:12
+rmi	Sender_t.java	/^	private RMINetworkManager rmi;$/;"	line:6
+rmiInit	Environment.java	/^	private void rmiInit(){$/;"	line:65
+rmi_name	Player.java	/^	private String name, rmi_name, address, hand[];$/;"	line:8
+row	InGameGraphics.java	/^	private boolean hold = false, row = false, col = false;$/;"	line:39
+rowOrColumn	InGameGraphics.java	/^	private void rowOrColumn(int x, int y, Cell c){$/;"	line:404
+run	Connectioner.java	/^	public synchronized void run(){$/;"	line:19
+run	Dispatcher_t.java	/^	public void run(){$/;"	line:16
+run	Environment.java	/^	public void run(){$/;"	line:38
+run	Sender_t.java	/^	public void run(){$/;"	line:17
+safeSuspend	Connectioner.java	/^	public synchronized void safeSuspend(){$/;"	line:147
+score	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+score	Player.java	/^	private int id, score;$/;"	line:9
+searchHorizontalAnchors	InGameGraphics.java	/^	private void searchHorizontalAnchors(int x, int y){$/;"	line:500
+searchVerticalAnchors	InGameGraphics.java	/^	private void searchVerticalAnchors(int x, int y){$/;"	line:518
+select	Cell.java	/^	public void select(char c){$/;"	line:92
+select	Letter.java	/^	public void select(){$/;"	line:52
+selected	Cell.java	/^	private boolean selected;$/;"	line:25
+selected	Letter.java	/^	private Image unselected, selected;$/;"	line:14
+selfExport	RMINetworkManager.java	/^	public boolean selfExport(){$/;"	line:46
+send	Environment.java	/^	Sender_t send;$/;"	line:11
+sendMessage	RMINetworkManager.java	/^	public boolean sendMessage(Message m){$/;"	line:133
+sendMove	GameState.java	/^	public void sendMove(Move move){$/;"	line:291
+sender	Message.java	/^	private String sender, dest, address_sender, address_dest;$/;"	line:24
+serialVersionUID	Cell.java	/^	private static final long serialVersionUID = 4074260117714327091L;$/;"	line:15
+serialVersionUID	GUI.java	/^	private static final long serialVersionUID = 5593950695513464355L;$/;"	line:9
+serialVersionUID	GameGraphics.java	/^	private static final long serialVersionUID = 1633661334079158190L;$/;"	line:10
+serialVersionUID	HomeGraphics.java	/^	private static final long serialVersionUID = 5442146611591669343L;$/;"	line:30
+serialVersionUID	InGameGraphics.java	/^	private static final long serialVersionUID = -2805714521564914502L;$/;"	line:30
+serialVersionUID	Letter.java	/^	private static final long serialVersionUID = -7005948919788615922L;$/;"	line:12
+serialVersionUID	Message.java	/^	private static final long serialVersionUID = 1396239693826474352L;$/;"	line:8
+serialVersionUID	Move.java	/^	private static final long serialVersionUID = 1339097317250470872L;$/;"	line:9
+serialVersionUID	Player.java	/^	private static final long serialVersionUID = -5728696841946939139L;$/;"	line:7
+serialVersionUID	PlayerList.java	/^	private static final long serialVersionUID = 6464616219263014420L;$/;"	line:8
+set2L	InGameGraphics.java	/^	private void set2L(){$/;"	line:244
+set2P	InGameGraphics.java	/^	private void set2P(){$/;"	line:288
+set3L	InGameGraphics.java	/^	private void set3L(){$/;"	line:272
+set3P	InGameGraphics.java	/^	private void set3P(){$/;"	line:232
+setAddress	Player.java	/^	public void setAddress(String address){$/;"	line:50
+setAddressDest	Message.java	/^	public void setAddressDest(String address){$/;"	line:62
+setAddressSender	Message.java	/^	public void setAddressSender(String address){$/;"	line:58
+setAsAnchor	InGameGraphics.java	/^	private void setAsAnchor(Cell c){$/;"	line:767
+setBag	Engine.java	/^	public void setBag(Vector<String> bag) {$/;"	line:229
+setBottomPanel	InGameGraphics.java	/^	private void setBottomPanel(){$/;"	line:113
+setButton	HomeGraphics.java	/^	private JButton setButton(String name, int x, int y, String icon_file_path, boolean visible){$/;"	line:215
+setC	Cell.java	/^	public void setC(char c){$/;"	line:101
+setC	Letter.java	/^	public void setC(char c){$/;"	line:70
+setChildren	TreeNode.java	/^	public void setChildren(List<TreeNode<T>> children) {$/;"	line:56
+setData	Message.java	/^	void setData(Vector<Object> another_data){$/;"	line:46
+setDest	Message.java	/^	public void setDest(String dest){$/;"	line:54
+setElement	TreeNode.java	/^	public void setElement(T element) {$/;"	line:67
+setGS	Connectioner.java	/^	public void setGS(GameState gs){$/;"	line:164
+setID	Message.java	/^	void setID(int another_id){$/;"	line:38
+setId	Player.java	/^	public void setId(int n){$/;"	line:54
+setJolly	InGameGraphics.java	/^	private void setJolly(){$/;"	line:303
+setLastSeen	Player.java	/^	public void setLastSeen(){$/;"	line:134
+setLeftPanel	InGameGraphics.java	/^	private void setLeftPanel(){$/;"	line:158
+setLetter	Cell.java	/^	public void setLetter(Letter l){$/;"	line:124
+setMe	GameState.java	/^	public void setMe(Player p){$/;"	line:382
+setMove	GameState.java	/^	public void setMove(Move mv){$/;"	line:374
+setMsg	HomeGraphics.java	/^	public synchronized void setMsg(String txt, Color text_color){$/;"	line:211
+setName	Player.java	/^	public void setName(String name){$/;"	line:42
+setName	RMINetworkManager.java	/^	public void setName(String name){$/;"	line:182
+setParent	TreeNode.java	/^	public void setParent(TreeNode<T> parent) {$/;"	line:30
+setPlayer	Move.java	/^	public void setPlayer(int player) {$/;"	line:75
+setPlayingPlayer	GameState.java	/^	public void setPlayingPlayer(int n){$/;"	line:378
+setPoints	Letter.java	/^	public void setPoints(int p){$/;"	line:90
+setReverse	Move.java	/^	public void setReverse(boolean b){$/;"	line:71
+setRightPanel	InGameGraphics.java	/^	private void setRightPanel(){$/;"	line:85
+setRmiName	Player.java	/^	public void setRmiName(String rmi_name){$/;"	line:46
+setScore	Move.java	/^	public void setScore(int score){$/;"	line:59
+setScore	Player.java	/^	public void setScore(int n){$/;"	line:58
+setSelectedImage	Letter.java	/^	public void setSelectedImage(Image i){$/;"	line:66
+setSender	Message.java	/^	public void setSender(String name){$/;"	line:50
+setState	GameState.java	/^	public synchronized void setState(int state){$/;"	line:141
+setTheIcon	Cell.java	/^	public void setTheIcon(ImageIcon i){$/;"	line:109
+setTheMove	InGameGraphics.java	/^	public void setTheMove(Move mv) {$/;"	line:716
+setTopPanel	InGameGraphics.java	/^	private void setTopPanel(){$/;"	line:194
+setType	Cell.java	/^	public void setType(int t, ImageIcon i){$/;"	line:114
+setType	Message.java	/^	void setType(int another_type){$/;"	line:42
+setUnselectedImage	Letter.java	/^	public void setUnselectedImage(Image i){$/;"	line:62
+setUnused	Cell.java	/^	public void setUnused(){$/;"	line:136
+setUsed	Cell.java	/^	public void setUsed(){$/;"	line:132
+setWord	Move.java	/^	public void setWord(String word) {$/;"	line:27
+setX1	Move.java	/^	public void setX1(int x1) {$/;"	line:33
+setX2	Move.java	/^	public void setX2(int x2) {$/;"	line:39
+setY1	Move.java	/^	public void setY1(int y1) {$/;"	line:45
+setY2	Move.java	/^	public void setY2(int y2) {$/;"	line:51
+shuffleTheBag	Engine.java	/^	private void shuffleTheBag(){$/;"	line:48
+someoneDrawnFromTheBag	Dispatcher_t.java	/^	private void someoneDrawnFromTheBag(){$/;"	line:106
+startGame	Dispatcher_t.java	/^	private void startGame(){$/;"	line:113
+state	GameState.java	/^	private int state, num_players, playing_player, zero_score;$/;"	line:18
+stopAnimation	HomeGraphics.java	/^	public void stopAnimation(){$/;"	line:281
+stub	RMINetworkManager.java	/^	private INetworkManager stub;$/;"	line:18
+switchToGame	GUI.java	/^	public void switchToGame(){$/;"	line:47
+switchToHome	GUI.java	/^	public void switchToHome(){$/;"	line:33
+t	HomeGraphics.java	/^	private Timer t;$/;"	line:38
+table	InGameGraphics.java	/^	private Cell table[][];$/;"	line:36
+tellToNextToStart	GameState.java	/^	public void tellToNextToStart(){$/;"	line:219
+thread_suspended	Connectioner.java	/^	private boolean end, thread_suspended;$/;"	line:9
+tmp_score	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+tw	InGameGraphics.java	/^	private int anchor1_x, anchor1_y, anchor2_x, anchor2_y, tmp_score, j, dw, tw;$/;"	line:40
+type	Cell.java	/^	private int type;$/;"	line:22
+type	Message.java	/^	private int type;$/;"	line:23
+unselect	Letter.java	/^	public void unselect(){$/;"	line:57
+unselected	Letter.java	/^	private Image unselected, selected;$/;"	line:14
+up	HomeGraphics.java	/^	private boolean wheel = false, popup = false, up = false;$/;"	line:35
+updateScore	GameState.java	/^	public void updateScore(int score, int player_id){$/;"	line:368
+used	Cell.java	/^	private boolean used;$/;"	line:26
+validIP	RMINetworkManager.java	/^	public boolean validIP (String ip) {$/;"	line:186
+vocabular	Engine.java	/^	private TreeNode<Character> vocabular;$/;"	line:38
+weNeedANewLeader	PlayerList.java	/^	public void weNeedANewLeader(){$/;"	line:155
+wheel	HomeGraphics.java	/^	private boolean wheel = false, popup = false, up = false;$/;"	line:35
+word	Move.java	/^	private String word;$/;"	line:10
+write	Connectioner.java	/^	private Vector<Message> write;$/;"	line:7
+write	Dispatcher_t.java	/^	private Vector<Message> read, write;$/;"	line:4
+write	Environment.java	/^	Vector<Message> read, write;$/;"	line:9
+write	RMINetworkManager.java	/^	private Vector<Message> buffer, write;$/;"	line:16
+x1	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+x2	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+y1	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+y2	Move.java	/^	private int x1, x2, y1, y2, score, player;$/;"	line:11
+zero_score	GameState.java	/^	private int state, num_players, playing_player, zero_score;$/;"	line:18
