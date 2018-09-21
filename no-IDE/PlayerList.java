@@ -96,8 +96,26 @@ public class PlayerList implements Serializable{
 			if(p.getId() > id && p.getId() < next.getId()) next = p;			
 		}		
 		return next;*/
+		
+		/*
 		if(this.players.indexOf(getPlayerByID(id))+1<this.players.size())return this.players.elementAt(this.players.indexOf((getPlayerByID(id)))+1);
 		else return this.players.elementAt(0);
+		*/
+		
+		boolean found = false;
+		int k = id+1;
+		Player d = new Player("", "", "", id);
+		while(!found){
+			for(Player p : this.players){
+				if(p.getId()==k){
+					return p;
+				}
+			}
+			k++;
+			if(k == id) return d;
+			if(k>=players.size())k = 0;
+		}
+		return d;
 	}
 	
 	public Vector<Player> getPlayers(){
