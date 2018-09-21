@@ -434,7 +434,7 @@ public class GameState {
 	public void nextPlayingPlayer(){
 		if(TheDistributedScrabble.DEBUG)System.out.println("Now is playing " + playing_player);
 		if(isMyTurn())return;
-		playing_player = this.players.getNextToMe(this.me.getId()).getId();
+		playing_player = this.players.getNextToMe(this.playing_player).getId();
 		/*if(playing_player==GameState.MAX_N_PLAYERS)playing_player = this.players.getPlayers().elementAt(0).getId();
 		else{
 			boolean found = false;
