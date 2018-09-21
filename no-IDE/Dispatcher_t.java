@@ -80,7 +80,7 @@ public class Dispatcher_t extends Thread {
 	private void byePeer(){
 		Vector<Object> data = (Vector<Object>)current.getData();
 		Player p = (Player)data.elementAt(0);
-		System.err.println("Our dear " + p.getName() + " is dead under unknown circumstances :(");
+		System.err.println(TheDistributedScrabble.ANSI_RED + "Our dear " + p.getName() + " is dead under unknown circumstances :(" + TheDistributedScrabble.ANSI_RESET);
 		this.gs.removePeer(p);
 		this.gs.nextPlayingPlayer();
 		synchronized(this.gs.getEnvironment()){
