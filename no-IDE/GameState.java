@@ -150,7 +150,7 @@ public class GameState {
 	}
 	
 	public void peerIsDead(Player p){
-		System.out.println(TheDistributedScrabble.ANSI_RED + "Our dear " + p.getName() + " is dead under unknown circumstances :(");
+		System.out.println(TheDistributedScrabble.ANSI_RED + "Our dear " + p.getName() + " is dead under unknown circumstances :(" + TheDistributedScrabble.ANSI_RESET);
 		Vector<Object> data = new Vector<Object>();
 		data.add(p);
 		for(Player d: players.getPlayers()){

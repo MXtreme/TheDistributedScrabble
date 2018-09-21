@@ -12,19 +12,21 @@ public class PlayerList implements Serializable{
 		players = new Vector<Player>();
 	}
 	
-	public void add(Player p){
+	public synchronized void add(Player p){
 		this.players.add(p);
 	}
 	
-	public void removeElement(Player p){
+	public synchronized void removeElement(Player p){
 		for(Player d : players){
 			if(d.getName().equals(p.getName()))this.players.remove(d);
+			break;
 		}
 	}
 	
-	public void removeHost(){
+	public synchronized void removeHost(){
 		for(Player pl : players){
 			if(pl.getName().equals("INetworkManager"))players.remove(pl);
+			break;
 		}
 	}
 	
@@ -97,9 +99,9 @@ public class PlayerList implements Serializable{
 	}
 	
 	public void listPlayers(){
-		System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Listing current players:");
+		System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Listing current players:" + TheDistributedScrabble.ANSI_RESET);
 		for(Player p : players){
-			System.out.println(TheDistributedScrabble.ANSI_YELLOW + "- " + p.getId() + " Nickname:" + p.getName() + " RMI:" + p.getRmiName() + " Address:"+ p.getAddress());
+			System.out.println(TheDistributedScrabble.ANSI_YELLOW + "- " + p.getId() + " Nickname:" + p.getName() + " RMI:" + p.getRmiName() + " Address:"+ p.getAddress() + TheDistributedScrabble.ANSI_RESET);
 		}
 	}
 	
