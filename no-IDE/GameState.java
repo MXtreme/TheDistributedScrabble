@@ -154,7 +154,7 @@ public class GameState {
 		Vector<Object> data = new Vector<Object>();
 		data.add(p);
 		for(Player d: players.getPlayers()){
-			if(d!= this.me && d!=p){
+			if(!d.getName().equals(this.me.getName()) && !d.getName().equals(p.getName())){
 				Message m = new Message(this.rmi.getName(), d.getRmiName(), this.rmi.getMyIP(), d.getAddress(), Message.MSG_CLIENT_EXITUS, data);
 				synchronized(this.getEnvironment().getWriteBuffer()){
 					this.getEnvironment().getWriteBuffer().add(m);
@@ -436,12 +436,15 @@ public class GameState {
 		if(isMyTurn())return;
 		if(playing_player==GameState.MAX_N_PLAYERS)playing_player = this.players.getPlayers().elementAt(0).getId();
 		else{
+			boolean found = false;
 			for(Player p: this.players.getPlayers()){
 				if(TheDistributedScrabble.DEBUG)System.out.println("Evaluating next player " + p.getId());
 				if(p.getId()>playing_player){
 					playing_player = p.getId();
+					found = true;
 					break;
 				}
+				if(found)break;
 			}
 		}
 		if(TheDistributedScrabble.DEBUG)System.out.println("But now is playing " + playing_player);
