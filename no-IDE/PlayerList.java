@@ -97,9 +97,9 @@ public class PlayerList implements Serializable{
 	}
 	
 	public void listPlayers(){
-		System.out.println("Listing current players:");
+		System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Listing current players:");
 		for(Player p : players){
-			System.out.println("- " + p.getId() + " Nickname:" + p.getName() + " RMI:" + p.getRmiName() + " Address:"+ p.getAddress());
+			System.out.println(TheDistributedScrabble.ANSI_YELLOW + "- " + p.getId() + " Nickname:" + p.getName() + " RMI:" + p.getRmiName() + " Address:"+ p.getAddress());
 		}
 	}
 	

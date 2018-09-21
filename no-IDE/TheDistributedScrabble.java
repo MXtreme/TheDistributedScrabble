@@ -1,4 +1,8 @@
 public class TheDistributedScrabble {
+	public static final String ANSI_RED = "\u001B[31m";
+	public static final String ANSI_GREEN = "\u001B[32m";
+	public static final String ANSI_YELLOW = "\u001B[33m";
+	
 	private static final Object monitor = new Object();
 	private static boolean end = false;
 	static boolean DEBUG = false;

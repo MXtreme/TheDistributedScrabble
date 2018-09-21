@@ -35,7 +35,7 @@ public class Connectioner extends Thread {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}synchronized(pl){
-					if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
+					//if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
 					if(!pl.getPlayers().isEmpty()){
 						pingToNext(pl);
 					}
@@ -46,10 +46,10 @@ public class Connectioner extends Thread {
 	private void pingToNext(PlayerList pl){
 		Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
 		if(TheDistributedScrabble.DEBUG)pl.listPlayers();
-		if(p!= null && TheDistributedScrabble.DEBUG)System.out.println("The next to me is " + p.getRmiName() + " @ " + p.getAddress());
+		if(p!= null && TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "The next to me is " + p.getRmiName() + " @ " + p.getAddress());
 		if(p!=null && p!=this.gs.getMe()){
 			boolean b = this.gs.isAlive(p);
-			if(TheDistributedScrabble.DEBUG)System.out.println("Connectioner: The next is " + b);
+			if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Connectioner: The next is " + b);
 			if(!b)
 				this.gs.peerIsDead(p);
 		}
