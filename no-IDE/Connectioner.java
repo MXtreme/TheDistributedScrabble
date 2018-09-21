@@ -33,8 +33,8 @@ public class Connectioner extends Thread {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					//if(TheDistributedScrabble.DEBUG)System.out.println("Hosting " + this.gs.isHosting() + " Host is null " + this.gs.getPlayers().getTheHost()!=null);
-					pingToNext();
 				}
+				pingToNext();
 			}
 	}
 		
