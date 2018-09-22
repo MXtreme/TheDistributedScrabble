@@ -92,9 +92,9 @@ public class PlayerList implements Serializable{
 		int playing = id;
 		do{
 			playing++;
-			if(playing>GameState.MAX_N_PLAYERS) playing_player = 1;
-		}while(!this.players.isThereAPlayerWithThisId(playing));
-		return this.players.getPlayerWithId(playing);
+			if(playing>GameState.MAX_N_PLAYERS) playing = 1;
+		}while(!this.isThereAPlayerWithThisId(playing));
+		return this.getPlayerWithId(playing);
 		
 		//Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
 		/*
