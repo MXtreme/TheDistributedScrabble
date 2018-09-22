@@ -90,6 +90,9 @@ public class Player implements Serializable {
 				if(s2.charAt(j)==s.charAt(i)){
 					if(TheDistributedScrabble.DEBUG)System.out.print(hand[j]);
 					hand[j]=null;
+					StringBuilder s3 = new StringBuilder(s2);
+					s3.setCharAt(j, ' ');
+					s2 = s3.toString();
 					break;
 				}
 			}

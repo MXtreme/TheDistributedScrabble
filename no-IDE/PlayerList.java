@@ -86,9 +86,12 @@ public class PlayerList implements Serializable{
 	}
 	
 	public Player getNextToMe(int id){
-		if(players.size() < 2){
+		/*if(players.size() < 2){
 			return null;
-		}
+		}*/
+		
+		if(this.players.indexOf(getPlayerByID(id))+1<this.players.size())return this.players.elementAt(this.players.indexOf(getPlayerByID(id))+1);
+		else return this.players.elementAt(0);
 		
 		//Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
 		/*
@@ -102,7 +105,7 @@ public class PlayerList implements Serializable{
 		else return this.players.elementAt(0);
 		*/
 		
-		boolean found = false;
+		/*boolean found = false;
 		int k = id+1;
 		Player d = new Player("", "", "", id);
 		while(!found){
@@ -115,7 +118,7 @@ public class PlayerList implements Serializable{
 			if(k == id) return d;
 			if(k>=players.size())k = 0;
 		}
-		return d;
+		return d;*/
 	}
 	
 	public Vector<Player> getPlayers(){
