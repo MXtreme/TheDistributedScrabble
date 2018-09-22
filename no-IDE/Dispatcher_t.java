@@ -81,8 +81,9 @@ public class Dispatcher_t extends Thread {
 		Vector<Object> data = (Vector<Object>)current.getData();
 		Player p = (Player)data.elementAt(0);
 		System.err.println(TheDistributedScrabble.ANSI_RED + "Our dear " + p.getName() + " is dead under unknown circumstances :(" + TheDistributedScrabble.ANSI_RESET);
+		if(this.gs.getPlayingPlayer()==p.getId())
+			this.gs.nextPlayingPlayer();
 		this.gs.removePeer(p);
-		this.gs.nextPlayingPlayer();
 		synchronized(this.gs.getEnvironment()){
 			this.gs.getEnvironment().notify();
 		}
