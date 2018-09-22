@@ -89,9 +89,12 @@ public class PlayerList implements Serializable{
 		/*if(players.size() < 2){
 			return null;
 		}*/
-		
-		if(this.players.indexOf(getPlayerByID(id))+1<this.players.size())return this.players.elementAt(this.players.indexOf(getPlayerByID(id))+1);
-		else return this.players.elementAt(0);
+		int playing = id;
+		do{
+			playing++;
+			if(playing>GameState.MAX_N_PLAYERS) playing_player = 1;
+		}while(!this.players.isThereAPlayerWithThisId(playing));
+		return this.players.getPlayerWithId(playing);
 		
 		//Player next = new Player("", "", "", GameState.MAX_N_PLAYERS + 1);
 		/*
