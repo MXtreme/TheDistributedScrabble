@@ -44,16 +44,26 @@ public class Connectioner extends Thread {
           synchronized(pl){
           	if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "In the critical section" + TheDistributedScrabble.ANSI_RESET);
 			if(!pl.getPlayers().isEmpty()){
-				if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "There are players" + TheDistributedScrabble.ANSI_RESET);
-				Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
-				if(TheDistributedScrabble.DEBUG)pl.listPlayers();
-				if(p!= null && TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "The next to me is " + p.getRmiName() + " @ " + p.getAddress() + TheDistributedScrabble.ANSI_RESET);
-				if(p!=null && p!=this.gs.getMe()){
-					boolean b = this.gs.isAlive(p);
-					if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Connectioner: The next is " + b + TheDistributedScrabble.ANSI_RESET);
-					if(!b){
-						this.gs.peerIsDead(p);
-						if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
+				if(this.gs.getState() == GameState.STATE_HOST){
+					for(Player p : pl){
+						if(!this.gs.isAlive(p)){
+							this.gs.peerIsDead(p);
+						}
+					}	
+					if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
+				}
+				else{
+					if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "There are players" + TheDistributedScrabble.ANSI_RESET);
+					Player p = this.gs.getPlayers().getNextToMe(this.gs.getMe().getId());
+					if(TheDistributedScrabble.DEBUG)pl.listPlayers();
+					if(p!= null && TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "The next to me is " + p.getRmiName() + " @ " + p.getAddress() + TheDistributedScrabble.ANSI_RESET);
+					if(p!=null && p!=this.gs.getMe()){
+						boolean b = this.gs.isAlive(p);
+						if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "Connectioner: The next is " + b + TheDistributedScrabble.ANSI_RESET);
+						if(!b){
+							this.gs.peerIsDead(p);
+							if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
+						}
 					}
 				}
 			}
