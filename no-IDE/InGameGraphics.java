@@ -349,13 +349,13 @@ public class InGameGraphics extends GameGraphics {
 		System.out.println("Deselecting things");
 		if(row){
 			for(int i=anchor1_x;i<=anchor2_x;i++){
-				table[anchor2_y][i].deselectFromTable();
-				if(TheDistributedScrabble.DEBUG)System.out.println("deselecting " + table[anchor2_y][i].getC());
+				table[anchor1_y][i].deselectFromTable();
+				if(TheDistributedScrabble.DEBUG)System.out.println("deselecting " + table[anchor1_y][i].getC());
 			}
 		}else{
 			for(int i=anchor1_y;i<=anchor2_y;i++){
-				table[i][anchor2_x].deselectFromTable();
-				if(TheDistributedScrabble.DEBUG)System.out.println("deselecting " + table[i][anchor2_x].getC());
+				table[i][anchor1_x].deselectFromTable();
+				if(TheDistributedScrabble.DEBUG)System.out.println("deselecting " + table[i][anchor1_x].getC());
 			}
 		}
 		
