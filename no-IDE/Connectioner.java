@@ -45,11 +45,16 @@ public class Connectioner extends Thread {
           	if(TheDistributedScrabble.DEBUG)System.out.println(TheDistributedScrabble.ANSI_YELLOW + "In the critical section" + TheDistributedScrabble.ANSI_RESET);
 			if(!pl.getPlayers().isEmpty()){
 				if(this.gs.getState() == GameState.STATE_HOST){
+					Vector<Player> g = new Vector<Player>();
 					for(Player p : pl.getPlayers()){
 						if(TheDistributedScrabble.DEBUG)System.out.println("In the hosting for " + p.getName());
 						if(!p.getRmiName().equals(this.gs.getMe().getRmiName()) && !this.gs.isAlive(p)){
-							this.gs.peerIsDead(p);
+							g.add(p);
+							//this.gs.peerIsDead(p);
 						}
+					}
+					for(Player p : g){
+						this.gs.peerIsDead(p);
 					}	
 					if(TheDistributedScrabble.DEBUG)this.gs.getPlayers().listPlayers();
 				}
