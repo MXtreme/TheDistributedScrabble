@@ -163,16 +163,20 @@ public class GameState {
 			}
 		}
 		removePeer(p);
-		if(num_players == 1){
-			this.gui.getInGameGraphics().hailToTheWinner(this.getMe().getId());
-		}else{
-			if(this.playing_player==p.getId()){	// it was his turn, damn him	è.é
-				if(TheDistributedScrabble.DEBUG)System.out.println("It was his turn, damn him.");
-				this.nextPlayingPlayer();
-				synchronized(this.getEnvironment()){
-					this.getEnvironment().notify();
+		if(this.state == GameState.STATE_GAME){
+			if(num_players == 1){
+				this.gui.getInGameGraphics().hailToTheWinner(this.getMe().getId());
+			}else{
+				if(this.playing_player==p.getId()){	// it was his turn, damn him	è.é
+					if(TheDistributedScrabble.DEBUG)System.out.println("It was his turn, damn him.");
+					this.nextPlayingPlayer();
+					synchronized(this.getEnvironment()){
+						this.getEnvironment().notify();
+					}
 				}
 			}
+		}if(this.state == GameState.STATE_HOST){
+			this.gui.getHome().refreshJoiningPlayers();		
 		}
 	}
 	
