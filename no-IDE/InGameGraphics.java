@@ -972,8 +972,8 @@ public class InGameGraphics extends GameGraphics {
 			anchor1_y = 8;
 		}
 		else if(this.gs.isMyTurn() && arg0.getSource() == button_reset){
-			cleanAnchors();
 			deselectAll();
+			cleanAnchors();
 			row = col = false;
 			anchor1_x = 8;
 			anchor1_y = 8;
