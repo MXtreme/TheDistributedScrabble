@@ -962,7 +962,7 @@ public class InGameGraphics extends GameGraphics {
 				}else{
 					System.out.println("Not legal move: " + word + " b: " + b + " :(");
 					cleanAnchors();
-					removeUsedLetters();
+					//removeUsedLetters();
 					//deselectAll();
 					deselectUsedLetters(row, anchor1_x, anchor2_x, anchor1_y, anchor2_y);
 				}
